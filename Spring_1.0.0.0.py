@@ -1,4 +1,5 @@
 from time import time
+from fractions import Fraction
 import math
 import sys
 
@@ -316,7 +317,8 @@ class compression:
 
                                     lenf2_times=lenf2/8
 
-                                    lenf_count_times=lenf2_times-1
+                                    lenf_count_times=lenf2*(2**48)
+                                    
 
                                     Bytes_row3=Bytes_row1
                                     
@@ -328,35 +330,11 @@ class compression:
 
                                     n=0
 
-                                    while n<lenf_count_times:
-                                        Bytes_row1er=Bytes_row1er//2
-                                        n=n+1
+                                    Bytes_row8=Fraction(Bytes_row1, lenf_count_times)
+                                    Spin=1
                  
                                     
-                                    Number2=Bytes_row1er
                                     
-                                    n2=0
-                                    while n2<lenf_count_times:
-                                        Number2=Number2*2
-                                        n2=n2+1
-                                        
-                                   
-
-                                    Number3=Number2
-                                    
-
-                                    Bytes_row8=Bytes_row1-Number3
-                                    
-                                   
-                                    Bytes_row4=Bytes_row1//2
-                                    Bytes_row6=Bytes_row4*2
-                                    Bytes_row5=Bytes_row1-Bytes_row6
-
-
-                                    if Bytes_row5!=Bytes_row1:
-                                        ii=1
-                                        Spin=1
-                                        
                                         
                                     #if  -1 count + round add then this to this number
                                     
