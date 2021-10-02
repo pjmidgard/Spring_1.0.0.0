@@ -32,8 +32,6 @@ class compression:
                     #m.mp.dps = 100000
                     #PI=4 * m.atan(1)
 
-                    f = open("pi-billion.txt", "r")
-                    PI=f.read()
 
 
                     sda4=""
@@ -321,10 +319,10 @@ class compression:
                                     Bytes_row1er=Bytes_row2e
 
                                     Bytes_row8=Fraction(Bytes_row1, lenf_count_times)
-                                                                  Bytes_row9=math.floor(Bytes_row8)
+                                    m=math.floor(Bytes_row8)
                                     
 
-                                    Bytes_row12=Bytes_row9*lenf_count_times
+                                    Bytes_row12=m*lenf_count_times
                                     Bytes_row14=Bytes_row1-Bytes_row12
 
                                     
