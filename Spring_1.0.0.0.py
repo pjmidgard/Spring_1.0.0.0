@@ -315,8 +315,6 @@ class compression:
 
                                     Bytes_row2=Bytes_row1
 
-                                    lenf2_times=lenf2/8
-
                                     lenf_count_times=lenf2*(2**48)
                                     
 
@@ -335,10 +333,12 @@ class compression:
                                     Bytes_row14=Bytes_row1-Bytes_row12
 
                                     
-                                    
+                                    if Bytes_row14!=0:
+                                       raise SystemExit
                                     if Bytes_row14==0:
                                         ii=1
                                         Spin=1
+                                    
                  
                                     
                                     
@@ -419,12 +419,8 @@ class compression:
                                         wer=sda6
                                         sda4=""
                                         szx=""
-                                        if ii==1:
-                                            
-                                            wer="0"+"1"+wer+"1"
-
-                                        if ii==0:
-                                            wer="0"+"0"+wer+"1"
+                                   
+                                        wer="1"+wer+"1"
                                         lenf=len(wer)
                                                         
                                         xc=8-lenf%8
