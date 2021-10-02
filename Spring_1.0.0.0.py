@@ -316,12 +316,6 @@ class compression:
                                     Bytes_row2=Bytes_row1
 
                                     lenf_count_times=lenf2*(2**48)
-                                    
-
-                                    Bytes_row3=Bytes_row1
-                                    
-                                    
-                                    round_bytes=math.floor(Bytes_row3)
 
                                     Bytes_row2e=Bytes_row1
                                     Bytes_row1er=Bytes_row2e
