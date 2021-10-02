@@ -341,8 +341,8 @@ class compression:
                                     
                                     if Spin==1:
                                          round_bytes2=math.floor(Bytes_row14)#%
-                                         Bytes_row18=Bytes_row14*lenf_count_times
-                                         Bytes_row19=Bytes_row12+Bytes_row18
+                                        
+                                         Bytes_row19=Bytes_row12+round_bytes2
                                          
                                          
                           
