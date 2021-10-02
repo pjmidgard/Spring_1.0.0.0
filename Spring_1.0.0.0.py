@@ -320,15 +320,15 @@ class compression:
 
                                     Bytes_row8=Fraction(Bytes_row1, lenf_count_times)
                                     m=math.floor(Bytes_row8)
-                                    
+                                   
 
                                     Bytes_row12=m*lenf_count_times
                                     Bytes_row14=Bytes_row1-Bytes_row12
 
-                                    
-                                    if Bytes_row14!=0:
-                                       raise SystemExit
+                                    print(Bytes_row14)
                                     if Bytes_row14==0:
+                                       raise SystemExit
+                                    if Bytes_row14!=0:
                                         ii=1
                                         Spin=1
                                     
@@ -339,7 +339,7 @@ class compression:
                                     #if  -1 count + round add then this to this number
                                     
                                     if Spin==1:
-                                         round_bytes=math.floor(Bytes_row8)#%
+                                         round_bytes=math.floor(Bytes_row14)#%
                                         
                                          n=0
                                          while 2**n < round_bytes: #n it long of bytes.
