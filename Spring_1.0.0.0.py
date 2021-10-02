@@ -328,10 +328,17 @@ class compression:
                                     Bytes_row2e=Bytes_row1
                                     Bytes_row1er=Bytes_row2e
 
-                                    n=0
-
                                     Bytes_row8=Fraction(Bytes_row1, lenf_count_times)
-                                    Spin=1
+                                    Bytes_row9=Bytes_row8
+
+                                    Bytes_row12=Bytes_row9*lenf_count_times
+                                    Bytes_row14=Bytes_row1-Bytes_row12
+
+                                    
+                                    
+                                    if Bytes_row14==0:
+                                        ii=1
+                                        Spin=1
                  
                                     
                                     
