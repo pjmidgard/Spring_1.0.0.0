@@ -325,7 +325,7 @@ class compression:
                                     Bytes_row12=m*lenf_count_times
                                     Bytes_row14=Bytes_row1-Bytes_row12
 
-                                    print(Bytes_row14)
+                                    #print(Bytes_row14)
                                     if Bytes_row14==0:
                                        raise SystemExit
                                     if Bytes_row14!=0:
