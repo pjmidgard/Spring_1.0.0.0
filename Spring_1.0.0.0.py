@@ -170,9 +170,9 @@ class compression:
                                     lenf3=len(sda2)
                                 lenf2=len(sda2)
 
-                                if lenf2>(2**32)-1:
+                                if lenf2>(2**40)-1:
                                     raise SystemExit
-                                if lenf2<134:
+                                if lenf2<135:
                                     raise SystemExit
                                 
                                 
@@ -392,10 +392,10 @@ class compression:
                                          szx=""
                                          Colaider3=bin(lenf2)[2:]
                                          lenf=len(Colaider3)
-                                         xc=40-lenf%40
+                                         xc=48-lenf%48
                                          z=0
                                          if xc!=0:
-                                             if xc!=40:
+                                             if xc!=48:
                                                  while z<xc:
                                                      szx="0"+szx
                                                      z=z+1
