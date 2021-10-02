@@ -321,7 +321,8 @@ class compression:
                                     Bytes_row1er=Bytes_row2e
 
                                     Bytes_row8=Fraction(Bytes_row1, lenf_count_times)
-                                    Bytes_row9=Bytes_row8
+                                                                  Bytes_row9=math.floor(Bytes_row8)
+                                    
 
                                     Bytes_row12=Bytes_row9*lenf_count_times
                                     Bytes_row14=Bytes_row1-Bytes_row12
