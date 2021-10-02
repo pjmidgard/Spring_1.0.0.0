@@ -316,7 +316,7 @@ class compression:
 
                                     lenf2_times=lenf2/8
 
-                                    lenf_count_times=1023
+                                    lenf_count_times=lenf2_times-1
 
                                     Bytes_row3=Bytes_row1
                                     
