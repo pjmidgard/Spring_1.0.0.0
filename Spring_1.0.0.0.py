@@ -235,6 +235,8 @@ class compression:
                                     #Extract
 
                                     #Number2=Number1
+                                    #5 bytes
+                                    
                                     
                                     #n5=0
                                     #while n5<1023:
@@ -261,6 +263,8 @@ class compression:
                                     
 
                                     #Number1
+
+                                    # Bytes_row8 you write this number of size that we got from 5 bytes.
 
                                     
                                         
