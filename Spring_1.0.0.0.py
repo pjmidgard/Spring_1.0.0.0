@@ -348,11 +348,10 @@ class compression:
                           
                                          Bytes_row20=Bytes_row1-Bytes_row19
                                          
-                                         
-                                         print(Bytes_row20)
-                                      
-                                         
-                                        
+                                         #print(Bytes_row20)
+                                         if Bytes_row20!=0:
+                                         	raise SystemExit
+                                       
                                          n=0
                                          while 2**n < round_bytes2: #n it long of bytes.
                                              n=n+1
