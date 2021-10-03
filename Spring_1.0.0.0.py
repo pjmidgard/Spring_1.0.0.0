@@ -313,7 +313,7 @@ class compression:
 
                                     Bytes_row2=Bytes_row1
 
-                                    lenf_count_times=lenf2*(2**48)
+                                    lenf_count_times=lenf2*(2**480)
 
                                     Bytes_row2e=Bytes_row1
                                     Bytes_row1er=Bytes_row2e
