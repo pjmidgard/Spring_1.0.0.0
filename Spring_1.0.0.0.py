@@ -321,7 +321,7 @@ class compression:
                                    
                                     m=m*m
                                     Bytes_row12=m*lenf_count_times
-                                    Bytes_row14=(Bytes_row1*Bytes_row)-Bytes_row12
+                                    Bytes_row14=(Bytes_row1*Bytes_row1)-Bytes_row12
                                     Bytes_row16=Bytes_row1//m
                                     Bytes_row17=Bytes_row1-(Bytes_row16*m)
 
