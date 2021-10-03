@@ -366,10 +366,10 @@ class compression:
                                          lenf=len(Colaider3)
                                         
                                         
-                                         xc=n2-lenf%n2
+                                         xc=lenf-lenf%lenf
                                          z=0
                                          if xc!=0:
-                                            if xc!=n2:
+                                            if xc!=lenf:
                                                 while z<xc:
                                                     szx="0"+szx
                                                     z=z+1
@@ -395,10 +395,10 @@ class compression:
                                          lenf=len(Colaider3)
                                         
                                         
-                                         xc=n-lenf%n
+                                         xc=lenf-lenf%lenf
                                          z=0
                                          if xc!=0:
-                                            if xc!=n:
+                                            if xc!=lenf:
                                                 while z<xc:
                                                     szx="0"+szx
                                                     z=z+1
