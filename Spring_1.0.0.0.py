@@ -325,8 +325,11 @@ class compression:
                                     Bytes_row12=m*lenf_count_times
                                     Bytes_row14=Bytes_row1-Bytes_row12
                                     Bytes_row16=Bytes_row1//m
+                                    Bytes_row17=Bytes_row1-(Bytes_row16*m)
+                                    
+                                    
 
-                                    #print(Bytes_row14)
+                                    #print(Bytes_row17)
                                     if Bytes_row14==0:
                                        raise SystemExit
                                     if Bytes_row14!=0:
@@ -352,11 +355,7 @@ class compression:
                                          if Bytes_row20!=0:
                                          	raise SystemExit
                                        
-                                         n2=0
-                                         while 2**n2 < round_bytes2: #n it long of bytes.
-                                             n2=n2+1
-                                        
-
+                                         
                                     #The colaider count information that got
                                     #n2 Long of the bytes that we got.
                                     
@@ -381,13 +380,56 @@ class compression:
                                          
                                          round_bytes=math.floor(Bytes_row16)#%
                                         
-                                         n=0
-                                         while 2**n < round_bytes: #n it long of bytes.
-                                             n=n+1
                                         
 
                                     #The colaider count information that got
                                     #n2 Long of the bytes that we got.
+
+
+
+                                         
+                                         szx=""
+                                         Colaider3=bin(Bytes_row17)[2:]
+                                         lenf=len(Colaider3)
+                                        
+                                        
+                                         xc=lenf-lenf%lenf
+                                         z=0
+                                         if xc!=0:
+                                            if xc!=lenf:
+                                                while z<xc:
+                                                    szx="0"+szx
+                                                    z=z+1
+                                                                                                
+                                         Colaider3=szx+Colaider3
+                                                                           
+                                         sda4=sda4+Colaider3
+                                       
+                                         szx=""
+                                         #print(round_bytes2)
+                                         #print(round_bytes)
+                                         #round3=round_bytes2*round_bytes*lenf_count_times
+                                         #print(round3)
+                                        
+                                       
+                                         Colaider3=bin(Bytes_row17)[2:]
+                                         lenf=len(Colaider3)
+                                         Colaider3=bin(lenf)[2:]
+                                         
+                                         xc=48-lenf%48
+                                         z=0
+                                         if xc!=0:
+                                             if xc!=48:
+                                                 while z<xc:
+                                                     szx="0"+szx
+                                                     z=z+1
+                                                    
+                                         Colaider3=szx+Colaider3
+                
+                                                                           
+                                         sda4=Colaider3+sda4
+                                         Colaider3=""
+                                         
                                     
 
                                          szx=""
