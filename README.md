@@ -20,4 +20,4 @@ Bytes_row17=Bytes_row17*Bytes_row17
 Bytes_row14=Bytes_row14*Bytes_row14
 Bytes_row17=Bytes_row17*Bytes_row17
 
-Bytes_row2=Bytes_row1-(Bytes_row17-Bytes_row16*((Bytes_row8*lenf_count_times)+(Bytes_row8*lenf_count_times))*lenf_count_times)
+Bytes_row2=Bytes_row1-(Bytes_row17-Bytes_row16 * ((Bytes_row8 * lenf_count_times)+(Bytes_row8 * lenf_count_times))*lenf_count_times)
