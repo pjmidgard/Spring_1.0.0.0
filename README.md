@@ -14,7 +14,7 @@ Bytes_row14=Bytes_row1-Bytes_row12
 Bytes_row16=Bytes_row1//m
 Bytes_row17=Bytes_row1-(Bytes_row16*m)
 
-#Bytes_row17, Bytes_row16, Bytes_row14
+#Bytes_row17, Bytes_row16 and Bytes_row14
                                     
 Bytes_row17=Bytes_row17*Bytes_row17
 Bytes_row14=Bytes_row14*Bytes_row14
