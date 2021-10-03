@@ -580,7 +580,7 @@ class compression:
                                               
                                             f2.write(jl)
                                             names2="c"+name
-                                            with open(names2, "ab") as f3:
+                                            with open(name, "wb") as f3:
                                                 f3.write(dj)
                                             x2 = time()
                                             x3=x2-x
