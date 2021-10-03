@@ -26,7 +26,7 @@ class compression:
                     if namez=="c":
                         i=1
                     if namez=="e":
-                        i=2
+                        i=1
                     
                     #import mpmath as m
                     #m.mp.dps = 100000
@@ -324,13 +324,22 @@ class compression:
                                     Bytes_row16=Bytes_row1//m
                                     Bytes_row17=Bytes_row1-(Bytes_row16*m)
 
+                                    #Bytes_row17, Bytes_row16, Bytes_row14, Bytes_row14
+
+
+                                    Bytes_row2=(0+Bytes_row14+(m*lenf_count_times)//m*m)
+
+                                    if Bytes_row2!= Bytes_row1:
+                                        raise SystemExit
                                     
 
-                                    #Bytes_row14
-                                    #Bytes_row16
-                                    #Bytes_row17
 
-                                    #Bytes_row17=Bytes_row1-(Bytes_row16*m)
+                                    #print(Bytes_row2)
+
+                                    
+
+                                    
+                                  
 
                                     
                                     
@@ -548,6 +557,15 @@ class compression:
                                         qqwslenf="%0"+qqwslenf+"x"
                                         jl=binascii.unhexlify(qqwslenf % n)
                                         sssssw=len(jl)
+
+
+                                        n = int(sda2, 2)
+                                        qqwslenf=len(wer)
+                                        qqwslenf=(qqwslenf/8)*2
+                                        qqwslenf=str(qqwslenf)
+                                        qqwslenf="%0"+qqwslenf+"x"
+                                        dj=binascii.unhexlify(qqwslenf % n)
+                                        sssssw=len(jl)
                                                     
                                         Circle_times=Circle_times+1
                                         szxzzza=""
@@ -561,6 +579,9 @@ class compression:
                                         if END_working==10:        
                                               
                                             f2.write(jl)
+                                            names2="c"+name
+                                            with open(names2, "ab") as f3:
+                                                f3.write(dj)
                                             x2 = time()
                                             x3=x2-x
                                             return print(x3)
