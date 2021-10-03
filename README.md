@@ -2,6 +2,7 @@
 Spring_1.0.0.0
 
 #Theorema Ferma proof:
+X*n=y*n=z*n
 
 
                                     
