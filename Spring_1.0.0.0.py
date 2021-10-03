@@ -361,8 +361,7 @@ class compression:
                                          Bytes_row20=Bytes_row1-Bytes_row19
                                          
                                          #print(Bytes_row20)
-                                         if Bytes_row20!=0:
-                                         	raise SystemExit
+                                  
                                        
                                          
                                     #The colaider count information that got
