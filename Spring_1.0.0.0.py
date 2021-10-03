@@ -328,9 +328,9 @@ class compression:
                                     #Bytes_row17, Bytes_row16, Bytes_row14, Bytes_row14
 
 
-                                    Bytes_row2=(0+Bytes_row14+(m*lenf_count_times)//m*m)
+                                    Bytes_row2=Bytes_row1-(Bytes_row17-Bytes_row16*((Bytes_row8*lenf_count_times)+(Bytes_row8*lenf_count_times))*lenf_count_times)
 
-                                    if Bytes_row2!= Bytes_row1:
+                                    if Bytes_row2==0:
                                         raise SystemExit
                                     
 
@@ -590,4 +590,3 @@ class compression:
 d=compression()
 
 xw=d.cryptograpy_compression()
-print(xw)
