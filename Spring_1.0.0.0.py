@@ -410,6 +410,8 @@ class compression:
                                          szx=""
                                          #print(round_bytes2)
                                          #print(round_bytes)
+                                         #round3=round_bytes2*round_bytes*lenf_count_times
+                                         #print(round3)
                                         
                                        
                                          Colaider3=bin(round_bytes2)[2:]
