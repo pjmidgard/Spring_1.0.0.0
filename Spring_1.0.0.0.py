@@ -353,7 +353,7 @@ class compression:
                                          	raise SystemExit
                                        
                                          n2=0
-                                         while 2**n < round_bytes2: #n it long of bytes.
+                                         while 2**n2 < round_bytes2: #n it long of bytes.
                                              n2=n2+1
                                         
 
