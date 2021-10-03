@@ -1,15 +1,23 @@
 # Spring_1.0.0.0
 Spring_1.0.0.0
 
-Algorithm Nasa Compression
+#Theorema Ferma proof:
 
-Developed: Jurijus Pacalovas
+lenf_count_times=lenf2*(2**480)
 
-Presentation:
+Bytes_row8=Fraction(Bytes_row1, lenf_count_times)
+m=math.floor(Bytes_row8)
+                                   
 
-My name is Jurijus Pacalovas.
+Bytes_row12=m*lenf_count_times
+Bytes_row14=Bytes_row1-Bytes_row12
+Bytes_row16=Bytes_row1//m
+Bytes_row17=Bytes_row1-(Bytes_row16*m)
 
-I had read literature about compressions like RLE, Huffman, PI, and API. I started to think about compression further on their own and operated by the wayside 2013 year and 1 I had seen the dream about my algorithm, but was a new RLE and so how I had compression random file and this happens. RLE Algorithm: could be deleting the same information or find information. Huffman Algorithm: it is deleting long makes long smaller, e.g. Huffman 0, 10, 11. PI Algorithm: it is written information were find and the end. API compression algorithm: it takes from 1 to 348 variations. Calculus Algorithm takes 14 bits and find what does not exist and write it, also n to the end to write 1 for compress 0 when not compress or just compress like this 2^n. Need add-ones then delete them. Fraction: This program calculate fraction in the your file compress and extract the same times. I will try to makes it better.
+#Bytes_row17, Bytes_row16, Bytes_row14
+                                    
+Bytes_row17=Bytes_row17*Bytes_row17
+Bytes_row14=Bytes_row14*Bytes_row14
+Bytes_row17=Bytes_row17*Bytes_row17
 
-Bye, bye.
-
+Bytes_row2=Bytes_row1-(Bytes_row17-Bytes_row16*((Bytes_row8*lenf_count_times)+(Bytes_row8*lenf_count_times))*lenf_count_times)
