@@ -408,10 +408,14 @@ class compression:
                                          sda4=sda4+Colaider3
                                        
                                          szx=""
+                                         #print(round_bytes2)
+                                         #print(round_bytes)
                                         
                                        
-                                         Colaider3=bin(n2)[2:]
+                                         Colaider3=bin(round_bytes2)[2:]
                                          lenf=len(Colaider3)
+                                         Colaider3=bin(lenf)[2:]
+                                         
                                          xc=48-lenf%48
                                          z=0
                                          if xc!=0:
