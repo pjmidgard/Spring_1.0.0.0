@@ -14,7 +14,7 @@ namea=""
 szx=""
 wer=""
 
-namez = input("Please, enter x or y")
+namez = input("Please, enter x or y ")
 #@Author Jurijus pacalovas
 class compression:
                 
