@@ -179,7 +179,7 @@ class compression:
                                 #########################################################################################################################################################
                                 
                                 block2=0
-                                if i==2:
+                                if i==1:
                                     
                                     sda2=sda2[1:]
                                     lenf5=len(sda2)
@@ -277,6 +277,7 @@ class compression:
                                     e4b=""
                                     block2=0
                                     sda5=""
+                                sda2=sda
                                     
                                    
                                 lenf6=len(sda4)
@@ -527,10 +528,10 @@ class compression:
                                     block2=0
                                     sda5=""
                                      
-                                    if i==2:
+                                    if i==1:
                                         wer=""
                                         szx=""
-                                        wer=sda4
+                                        wer=sda6
 
                                     if i==1:
                                         wer=""
