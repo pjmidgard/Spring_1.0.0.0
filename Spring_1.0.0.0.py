@@ -14,7 +14,7 @@ namea=""
 szx=""
 wer=""
 
-namez = input("c for compress or e for extract? ")
+namez = input("Please, enter x or y")
 #@Author Jurijus pacalovas
 class compression:
                 
@@ -22,7 +22,7 @@ class compression:
                 
                 self.name = "Written: Jurijus pacalovas Date: 29/09/2021 18:06"
                 
-                if namez=="c" or namez=="e":
+                if namez=="x" or namez=="y":
                     if namez=="c":
                         i=1
                     if namez=="e":
