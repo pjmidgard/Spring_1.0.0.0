@@ -352,9 +352,9 @@ class compression:
                                          if Bytes_row20!=0:
                                          	raise SystemExit
                                        
-                                         n=0
+                                         n2=0
                                          while 2**n < round_bytes2: #n it long of bytes.
-                                             n=n+1
+                                             n2=n2+1
                                         
 
                                     #The colaider count information that got
@@ -366,10 +366,10 @@ class compression:
                                          lenf=len(Colaider3)
                                         
                                         
-                                         xc=n-lenf%n
+                                         xc=n2-lenf%n2
                                          z=0
                                          if xc!=0:
-                                            if xc!=n:
+                                            if xc!=n2:
                                                 while z<xc:
                                                     szx="0"+szx
                                                     z=z+1
@@ -410,7 +410,7 @@ class compression:
                                          szx=""
                                         
                                        
-                                         Colaider3=bin(n)[2:]
+                                         Colaider3=bin(n2)[2:]
                                          lenf=len(Colaider3)
                                          xc=48-lenf%48
                                          z=0
