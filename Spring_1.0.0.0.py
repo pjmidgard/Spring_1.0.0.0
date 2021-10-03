@@ -315,9 +315,6 @@ class compression:
 
                                     lenf_count_times=lenf2*(2**480)
 
-                                    Bytes_row2e=Bytes_row1
-                                    Bytes_row1er=Bytes_row2e
-
                                     Bytes_row8=Fraction(Bytes_row1, lenf_count_times)
                                     m=math.floor(Bytes_row8)
                                    
@@ -326,9 +323,20 @@ class compression:
                                     Bytes_row14=Bytes_row1-Bytes_row12
                                     Bytes_row16=Bytes_row1//m
                                     Bytes_row17=Bytes_row1-(Bytes_row16*m)
+
+                                    
+
+                                    #Bytes_row14
+                                    #Bytes_row16
+                                    #Bytes_row17
+
+                                    #Bytes_row17=Bytes_row1-(Bytes_row16*m)
+
                                     
                                     
 
+                                    #Bytes_row16*m=Bytes_row1, x m/lenf_count_times  Bytes_row14=Bytes_row1-Bytes_row12
+                                    
                                     #print(Bytes_row17)
                                     if Bytes_row14==0:
                                        raise SystemExit
