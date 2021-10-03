@@ -408,7 +408,9 @@ class compression:
                                          sda4=sda4+Colaider3
                                        
                                          szx=""
-                                         Colaider3=bin(Bytes_row14)[2:]
+                                        
+                                       
+                                         Colaider3=bin(n)[2:]
                                          lenf=len(Colaider3)
                                          xc=48-lenf%48
                                          z=0
