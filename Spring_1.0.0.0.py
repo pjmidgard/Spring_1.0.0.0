@@ -23,9 +23,9 @@ class compression:
                 self.name = "Written: Jurijus pacalovas Date: 29/09/2021 18:06"
                 
                 if namez=="x" or namez=="y":
-                    if namez=="c":
+                    if namez=="x":
                         i=1
-                    if namez=="e":
+                    if namez=="y":
                         i=1
                     
                     #import mpmath as m
