@@ -181,39 +181,6 @@ class compression:
                                 block2=0
                                 if i==2:
                                     
-                                    sda2=sda2[1:]
-                                    lenf5=len(sda2)
-                                   
-                                    if sda2[lenf5-8:lenf5]=="10000000":
-
-                                        sda2=sda2[:lenf5-8]
-
-                                    elif sda2[lenf5-7:lenf5]=="1000000":
-
-                                        sda2=sda2[:lenf5-7]
-
-                                    elif sda2[lenf5-6:lenf5]=="100000":
-
-                                        sda2=sda2[:lenf5-6]
-
-                                    elif sda2[lenf5-5:lenf5]=="10000":
-
-                                        sda2=sda2[:lenf5-5]
-
-
-                                    elif sda2[lenf5-3:lenf5]=="100":
-
-                                        sda2=sda2[:lenf5-3]
-
-                                    elif sda2[lenf5-2:lenf5]=="10":
-
-                                        sda2=sda2[:lenf5-2]
-
-                                    elif sda2[lenf5-1:lenf5]=="1":
-
-                                        sda2=sda2[:lenf5-1]
-
-                                        
                                     lenf5=len(sda2)
                                         
                                     block2=0
@@ -232,29 +199,50 @@ class compression:
 
                                     Spin2=0
                                     #Extract
+                                    
+                                    
 
                                     sda4=""
                                     sda5=""
                                     sda6=""
+                                    sda7=""
 
-                                    sda4=sda3[0:48]
-                                    sda5=sda3[48:96]
-
-                                    Bytes_row1a=int(sda4, 2)
-                                    Bytes_row2a=int(sda5, 2)#
-
-                                    sda6=sda3[96:Bytes_row2a+96]
+                                    sda4=sda3[0:48]#lenf2
+                                    sda5=sda3[48:1248]               #Bytes_row14
+                                    sda7=sda3[1248:2448]#om
                                     
-                                    Bytes_row3a=int(sda6, 2) #Bytes_row14
-
-                                    sda7=sda3[Bytes_row2a+96:]
-
-                                    Bytes_row4a=int(sda7, 2)#
-
+                                    sda4=str(sda4)
+                                    sda5=str(sda5)
+                                    sda7=str(sda7)
                                     
+                                    lenf2=int(sda4,2)
+                                    Bytes_row14=int(sda5,2)
+                                    om=int(sda7,2)
                                     
+                                    lenf_count_times=lenf2*(2**480)
+                                    B2=Bytes_row14*lenf_count_times
+                                    B3=B2*B2
+                                    m=om-B3
+                                    Bytes_row12=m*lenf_count_times
+                                    Bytes_row1=Bytes_row14+Bytes_row12
+                                         szx=""
+                                         Colaider3=bin(Bytes_row1)[2:]
+                                         lenf=len(Colaider3)
+                                         xc=lenf2-lenf%lenf2
+                                         z=0
+                                         if xc!=0:
+                                             if xc!=lenf2:
+                                                 while z<xc:
+                                                     szx="0"+szx
+                                                     z=z+1
+                                                    
+                                         Colaider3=szx+Colaider3
+                
+                                                                           
+                                         sda4=Colaider3+sda4
+                                         Colaider3=""
 
-                                    ##############################################################################################################################################
+                                         sda6=sda4 ##############################################################################################################################################
                                     
 
                                 
@@ -318,7 +306,7 @@ class compression:
                                     #if  -1 count + round add then this to this number
                                     
                                     if Spin==1:
-                                         round_bytes2=math.floor(Bytes_row14)#%
+                                         round_bytes2=Bytes_row14#%
                                         
                                          
                                     #The colaider count information that got
@@ -349,9 +337,6 @@ class compression:
                                     
                                     #The colaider count information that got
                                     #n2 Long of the bytes that we got.
-
-                                         
-                                         szx=""
 
                                          szx=""
                                          Colaider3=bin(Bytes_row14)[2:]
