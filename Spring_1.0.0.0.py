@@ -14,7 +14,7 @@ namea=""
 szx=""
 wer=""
 
-namez = input("Please, enter x or y ")
+namez = input("c for compress or e for extract? ")
 #@Author Jurijus pacalovas
 class compression:
                 
@@ -22,10 +22,10 @@ class compression:
                 
                 self.name = "Written: Jurijus pacalovas Date: 29/09/2021 18:06"
                 
-                if namez=="x" or namez=="y":
-                    if namez=="x":
+                if namez=="c" or namez=="e":
+                    if namez=="c":
                         i=1
-                    if namez=="y":
+                    if namez=="e":
                         i=1
                     
                     #import mpmath as m
@@ -179,7 +179,7 @@ class compression:
                                 #########################################################################################################################################################
                                 
                                 block2=0
-                                if i==1:
+                                if i==2:
                                     
                                     sda2=sda2[1:]
                                     lenf5=len(sda2)
@@ -318,46 +318,13 @@ class compression:
 
                                     Bytes_row8=Fraction(Bytes_row1, lenf_count_times)  
                                     
-                                    
                                     m=math.floor(Bytes_row8)
                                    
-
                                     Bytes_row12=m*lenf_count_times
                                     Bytes_row14=Bytes_row1-Bytes_row12
                                     om=m-(Bytes_row14*lenf_count_times)
-                                    
-                                    Bytes_row16=Bytes_row1//m
-                                    Bytes_row17=Bytes_row1-(Bytes_row16*m)
-
-                                    #Bytes_row17, Bytes_row16, Bytes_row14
-
-
-                                    Bytes_row2=Bytes_row1-(Bytes_row17-Bytes_row16*((Bytes_row8*lenf_count_times)+(Bytes_row8*lenf_count_times))*lenf_count_times)
-                                    
-             
-                                    if Bytes_row2==0:
-                                        raise SystemExit
-                                    
-
-
-                                    #print(Bytes_row2)
-
-                                    
-
-                                    
-                                  
-
-                                    
-                                    
-
-                                    #Bytes_row16*m=Bytes_row1, x m/lenf_count_times  Bytes_row14=Bytes_row1-Bytes_row12
-                                    
-                                    #print(Bytes_row17)
-                                    if Bytes_row14==0:
-                                       raise SystemExit
-                                    if Bytes_row14!=0:
-                                        ii=1
-                                        Spin=1
+                                 
+                                    Spin=1
                                     
                  
                                     
@@ -399,22 +366,12 @@ class compression:
                                          Colaider3=szx+Colaider3
                                                                            
                                          sda4=sda4+Colaider3
-                                         
-                                         
-                                         round_bytes=math.floor(Bytes_row16)#%
-                                        
-                                        
-
+                                    
                                     #The colaider count information that got
                                     #n2 Long of the bytes that we got.
 
-
-
                                          
                                          szx=""
-
-                                         
-                                    
 
                                          szx=""
                                          Colaider3=bin(Bytes_row14)[2:]
@@ -495,7 +452,7 @@ class compression:
                                     block2=0
                                     sda5=""
                                      
-                                    if i==1:
+                                    if i==2:
                                         wer=""
                                         szx=""
                                         wer=sda6
