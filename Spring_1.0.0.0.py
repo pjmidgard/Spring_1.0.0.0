@@ -440,7 +440,7 @@ class compression:
                                          #print(round3)
                                         
                                        
-                                         Colaider3=bin(Bytes_row14)[2:]
+                                         Colaider3=bin(om)[2:]
                                          lenf=len(Colaider3)
                                          Colaider3=bin(lenf)[2:]
                                          lenf=len(Colaider3)
