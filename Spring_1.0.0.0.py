@@ -169,7 +169,7 @@ class compression:
                                     lenf3=len(sda2)
                                 lenf2=len(sda2)
 
-                                if lenf2>(2**40)-1:
+                                if lenf2>30000:
                                     raise SystemExit
                                 if lenf2<306:
                                     raise SystemExit
@@ -208,8 +208,8 @@ class compression:
                                     sda7=""
 
                                     sda4=sda3[0:48]#lenf2
-                                    sda5=sda3[48:1248]               #Bytes_row14
-                                    sda7=sda3[1248:2448]#om
+                                    sda5=sda3[48:48+30]               #Bytes_row14
+                                    sda7=sda3[48+30:]#om
                                     
                                     sda4=str(sda4)
                                     sda5=str(sda5)
@@ -225,24 +225,10 @@ class compression:
                                     m=om-B3
                                     Bytes_row12=m*lenf_count_times
                                     Bytes_row1=Bytes_row14+Bytes_row12
-                                         szx=""
-                                         Colaider3=bin(Bytes_row1)[2:]
-                                         lenf=len(Colaider3)
-                                         xc=lenf2-lenf%lenf2
-                                         z=0
-                                         if xc!=0:
-                                             if xc!=lenf2:
-                                                 while z<xc:
-                                                     szx="0"+szx
-                                                     z=z+1
-                                                    
-                                         Colaider3=szx+Colaider3
-                
-                                                                           
-                                         sda4=Colaider3+sda4
-                                         Colaider3=""
-
-                                         sda6=sda4 ##############################################################################################################################################
+                                    szx=""
+                                    
+                                    
+                                          ##############################################################################################################################################
                                     
 
                                 
@@ -285,17 +271,31 @@ class compression:
 
                                     Bytes_row2=Bytes_row1
 
-                                    lenf_count_times=lenf2*(2**480)
-
-                                    Bytes_row8=Fraction(Bytes_row1, lenf_count_times)  
-                                    
-                                    m=math.floor(Bytes_row8)
+                                    lenf_count_times=lenf2
+                                    k=Fraction(Bytes_row1, lenf_count_times)  
+                                    m=math.floor(k)
                                    
                                     Bytes_row12=m*lenf_count_times
                                     Bytes_row14=Bytes_row1-Bytes_row12
-                                    B2=Bytes_row14*lenf_count_times
+                                    
+                                    
+                                    lenf_count_times=lenf2*(2**480)
+                                                                  
+                                    k=Fraction(Bytes_row1, lenf_count_times)  
+                                    m=math.floor(k)
+                                   
+                                    Bytes_row12t=m*lenf_count_times
+                                    Bytes_row14t=Bytes_row1-Bytes_row12t
+                                    
+                                    #print(Bytes_row14)
+                                    
+                                    #print(Bytes_row14t)
+                                    
+                                    B2=(Bytes_row14*lenf_count_times)
                                     B3= B2*B2
+                                  
                                     om=m-(B3)
+                                   
                                  
                                     Spin=1
                                     
@@ -314,13 +314,14 @@ class compression:
                                         
                                         
                                          szx=""
-                                         BT=150*8
+                                         BT=32
                                          
   									   
   					
                                          Colaider3=bin(round_bytes2)[2:]
                                          lenf=len(Colaider3)
-                                         if lenf>(150*8):
+                                         print(lenf)
+                                         if lenf>(32):
                                          	raise SystemExit
                                        
                                          xc=BT-lenf%BT
@@ -339,15 +340,14 @@ class compression:
                                     #n2 Long of the bytes that we got.
 
                                          szx=""
-                                         Colaider3=bin(Bytes_row14)[2:]
+                                         Colaider3=bin(om)[2:]
                                          lenf=len(Colaider3)
-                                         if lenf>(150*8):
-                                         	raise SystemExit
-                                        
-                                         xc=BT-lenf%BT
+                                         
+                                  
+                                         xc=lenf-lenf%lenf
                                          z=0
                                          if xc!=0:
-                                            if xc!=BT:
+                                            if xc!=lenf:
                                                 while z<xc:
                                                     szx="0"+szx
                                                     z=z+1
