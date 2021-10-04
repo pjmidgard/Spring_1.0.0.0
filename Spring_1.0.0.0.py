@@ -171,7 +171,7 @@ class compression:
 
                                 if lenf2>(2**40)-1:
                                     raise SystemExit
-                                if lenf2<1:
+                                if lenf2<306:
                                     raise SystemExit
                                 
                                 
@@ -323,17 +323,22 @@ class compression:
                                          
                                     #The colaider count information that got
                                     #n2 Long of the bytes that we got.
-                                    
-
+                                        
+                                        
                                          szx=""
+                                         BT=150*8
+                                         
+  									   
+  					
                                          Colaider3=bin(round_bytes2)[2:]
                                          lenf=len(Colaider3)
-                                        
-                                        
-                                         xc=lenf-lenf%lenf
+                                         if lenf>(150*8):
+                                         	raise SystemExit
+                                       
+                                         xc=BT-lenf%BT
                                          z=0
                                          if xc!=0:
-                                            if xc!=lenf:
+                                            if xc!=BT:
                                                 while z<xc:
                                                     szx="0"+szx
                                                     z=z+1
@@ -351,12 +356,13 @@ class compression:
                                          szx=""
                                          Colaider3=bin(Bytes_row14)[2:]
                                          lenf=len(Colaider3)
+                                         if lenf>(150*8):
+                                         	raise SystemExit
                                         
-                                        
-                                         xc=lenf-lenf%lenf
+                                         xc=BT-lenf%BT
                                          z=0
                                          if xc!=0:
-                                            if xc!=lenf:
+                                            if xc!=BT:
                                                 while z<xc:
                                                     szx="0"+szx
                                                     z=z+1
@@ -373,50 +379,7 @@ class compression:
                                          #print(round3)
                                         
                                        
-                                         Colaider3=bin(Bytes_row14)[2:]
-                                         lenf=len(Colaider3)
-                                         Colaider3=bin(lenf)[2:]
-                                         lenf=len(Colaider3)
-                                         
-                                         xc=48-lenf%48
-                                         z=0
-                                         if xc!=0:
-                                             if xc!=48:
-                                                 while z<xc:
-                                                     szx="0"+szx
-                                                     z=z+1
-                                                    
-                                         Colaider3=szx+Colaider3
-                
-                                                                           
-                                         sda4=Colaider3+sda4
-                                         Colaider3=""
-                                       
-                                         szx=""
-                                         #print(round_bytes2)
-                                         #print(round_bytes)
-                                         #round3=round_bytes2*round_bytes*lenf_count_times
-                                         #print(round3)
-                                        
-                                       
-                                         Colaider3=bin(om)[2:]
-                                         lenf=len(Colaider3)
-                                         Colaider3=bin(lenf)[2:]
-                                         lenf=len(Colaider3)
-                                         
-                                         xc=48-lenf%48
-                                         z=0
-                                         if xc!=0:
-                                             if xc!=48:
-                                                 while z<xc:
-                                                     szx="0"+szx
-                                                     z=z+1
-                                                    
-                                         Colaider3=szx+Colaider3
-                
-                                                                           
-                                         sda4=Colaider3+sda4
-                                         Colaider3=""
+  
                                          
                                          
                                          szx=""
@@ -464,19 +427,7 @@ class compression:
                                         wer=sda6
                                         sda4=""
                                         szx=""
-                                   
-                                        wer="1"+wer+"1"
-                                        lenf=len(wer)
-                                                        
-                                        xc=8-lenf%8
-                                        z=0
-                                        if xc!=0:
-                                            if xc!=8:
-                                                while z<xc:
-                                                    szx="0"+szx
-                                                    z=z+1
-                                        wer=wer+szx
-                                                                                    
+                                                                             
                                         n = int(wer, 2)
                                         qqwslenf=len(wer)
                                         qqwslenf=(qqwslenf/8)*2
