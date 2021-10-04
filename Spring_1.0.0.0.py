@@ -316,12 +316,16 @@ class compression:
 
                                     lenf_count_times=lenf2*(2**480)
 
-                                    Bytes_row8=Fraction(Bytes_row1, lenf_count_times)
+                                    Bytes_row8=Fraction(Bytes_row1, lenf_count_times)  
+                                    
+                                    
                                     m=math.floor(Bytes_row8)
                                    
 
                                     Bytes_row12=m*lenf_count_times
                                     Bytes_row14=Bytes_row1-Bytes_row12
+                                    om=m-(Bytes_row14*lenf_count_times)
+                                    
                                     Bytes_row16=Bytes_row1//m
                                     Bytes_row17=Bytes_row1-(Bytes_row16*m)
 
@@ -408,51 +412,12 @@ class compression:
 
                                          
                                          szx=""
-                                         Colaider3=bin(Bytes_row17)[2:]
-                                         lenf=len(Colaider3)
-                                        
-                                        
-                                         xc=lenf-lenf%lenf
-                                         z=0
-                                         if xc!=0:
-                                            if xc!=lenf:
-                                                while z<xc:
-                                                    szx="0"+szx
-                                                    z=z+1
-                                                                                                
-                                         Colaider3=szx+Colaider3
-                                                                           
-                                         sda4=sda4+Colaider3
-                                       
-                                         szx=""
-                                         #print(round_bytes2)
-                                         #print(round_bytes)
-                                         #round3=round_bytes2*round_bytes*lenf_count_times
-                                         #print(round3)
-                                        
-                                       
-                                         Colaider3=bin(Bytes_row17)[2:]
-                                         lenf=len(Colaider3)
-                                         Colaider3=bin(lenf)[2:]
-                                         
-                                         xc=48-lenf%48
-                                         z=0
-                                         if xc!=0:
-                                             if xc!=48:
-                                                 while z<xc:
-                                                     szx="0"+szx
-                                                     z=z+1
-                                                    
-                                         Colaider3=szx+Colaider3
-                
-                                                                           
-                                         sda4=Colaider3+sda4
-                                         Colaider3=""
+
                                          
                                     
 
                                          szx=""
-                                         Colaider3=bin(round_bytes)[2:]
+                                         Colaider3=bin(Bytes_row14)[2:]
                                          lenf=len(Colaider3)
                                         
                                         
@@ -475,9 +440,10 @@ class compression:
                                          #print(round3)
                                         
                                        
-                                         Colaider3=bin(round_bytes2)[2:]
+                                         Colaider3=bin(Bytes_row14)[2:]
                                          lenf=len(Colaider3)
                                          Colaider3=bin(lenf)[2:]
+                                         lenf=len(Colaider3)
                                          
                                          xc=48-lenf%48
                                          z=0
@@ -591,5 +557,3 @@ class compression:
 d=compression()
 
 xw=d.cryptograpy_compression()
-
-print("x*n=y*n=z*n lenf_count_times=lenf2*(2**480) Bytes_row8=Fraction(Bytes_row1, lenf_count_times) m=math.floor(Bytes_row8) Bytes_row12=m*lenf_count_times Bytes_row14=Bytes_row1-Bytes_row12.Bytes_row16=Bytes_row1//m Bytes_row17=Bytes_row1-(Bytes_row16*m) Bytes_row2=Bytes_row1-(Bytes_row17-Bytes_row16*((Bytes_row8*lenf_count_times)+(Bytes_row8*lenf_count_times))*lenf_count_times)")
