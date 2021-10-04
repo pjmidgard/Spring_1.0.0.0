@@ -305,7 +305,9 @@ class compression:
                                    
                                     Bytes_row12=m*lenf_count_times
                                     Bytes_row14=Bytes_row1-Bytes_row12
-                                    om=m-(Bytes_row14*lenf_count_times)
+                                    B2=Bytes_row14*lenf_count_times
+                                    B3= B2*B2
+                                    om=m-(B3)
                                  
                                     Spin=1
                                     
