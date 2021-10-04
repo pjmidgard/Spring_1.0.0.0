@@ -26,7 +26,7 @@ class compression:
                     if namez=="c":
                         i=1
                     if namez=="e":
-                        i=1
+                        i=2
                     
                     #import mpmath as m
                     #m.mp.dps = 100000
@@ -233,40 +233,26 @@ class compression:
                                     Spin2=0
                                     #Extract
 
-                                    #Number2=Number1
-                                    #5 bytes
+                                    sda4=""
+                                    sda5=""
+                                    sda6=""
+
+                                    sda4=sda3[0:48]
+                                    sda5=sda3[48:96]
+
+                                    Bytes_row1a=int(sda4, 2)
+                                    Bytes_row2a=int(sda5, 2)#
+
+                                    sda6=sda3[96:Bytes_row2a+96]
+                                    
+                                    Bytes_row3a=int(sda6, 2) #Bytes_row14
+
+                                    sda7=sda3[Bytes_row2a+96:]
+
+                                    Bytes_row4a=int(sda7, 2)#
+
                                     
                                     
-                                    #n5=0
-                                    #while n5<1023:
-                                            #Number2=Number2*2
-                                            #n5=n5+1
-
-                                    #Number3=Number2
-
-                                    #while Number2==Bytes_row8:
-                                        #n4=0
-                                        #while n4<lenf_count_times:
-                                            #Number3=Number3*2
-                                            #n4=n4+1
-                                        #Number4=Number3
-                                        #n6=0
-                                        #while n6<lenf_count_times:
-                                            #Number4=Number4//2
-                                            #n6=n6+1
-
-                                        #Bytes_row8=Number3-Number4
-
-                                        #Number2=Number2+1
-                                        #Number3=Number2
-                                    
-
-                                    #Number1
-
-                                    # Bytes_row8 you write this number of size that we got from 5 bytes.
-
-                                    
-                                        
 
                                     ##############################################################################################################################################
                                     
@@ -277,7 +263,7 @@ class compression:
                                     e4b=""
                                     block2=0
                                     sda5=""
-                                sda2=sda
+                                
                                     
                                    
                                 lenf6=len(sda4)
@@ -302,9 +288,6 @@ class compression:
                                     szx=""
 
                                     sda6=""
-
-                                    #Compression
-
 
                                     #Compression
 
@@ -335,16 +318,6 @@ class compression:
                                     if Spin==1:
                                          round_bytes2=math.floor(Bytes_row14)#%
                                         
-                                         Bytes_row19=Bytes_row12+round_bytes2
-                                         
-                                         
-                          
-                                         Bytes_row20=Bytes_row1-Bytes_row19
-                                         
-                                         #print(Bytes_row20)
-                                         if Bytes_row20!=0:
-                                         	raise SystemExit
-                                       
                                          
                                     #The colaider count information that got
                                     #n2 Long of the bytes that we got.
@@ -389,6 +362,33 @@ class compression:
                                          Colaider3=szx+Colaider3
                                                                            
                                          sda4=sda4+Colaider3
+
+
+                                         szx=""
+                                         #print(round_bytes2)
+                                         #print(round_bytes)
+                                         #round3=round_bytes2*round_bytes*lenf_count_times
+                                         #print(round3)
+                                        
+                                       
+                                         Colaider3=bin(Bytes_row14)[2:]
+                                         lenf=len(Colaider3)
+                                         Colaider3=bin(lenf)[2:]
+                                         lenf=len(Colaider3)
+                                         
+                                         xc=48-lenf%48
+                                         z=0
+                                         if xc!=0:
+                                             if xc!=48:
+                                                 while z<xc:
+                                                     szx="0"+szx
+                                                     z=z+1
+                                                    
+                                         Colaider3=szx+Colaider3
+                
+                                                                           
+                                         sda4=Colaider3+sda4
+                                         Colaider3=""
                                        
                                          szx=""
                                          #print(round_bytes2)
@@ -504,9 +504,6 @@ class compression:
                                         if END_working==10:        
                                               
                                             f2.write(jl)
-                                            names2="c"+name
-                                            with open(name, "wb") as f3:
-                                                f3.write(dj)
                                             x2 = time()
                                             x3=x2-x
                                             return print(x3)
