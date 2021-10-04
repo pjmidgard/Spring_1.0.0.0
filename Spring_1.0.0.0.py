@@ -171,8 +171,8 @@ class compression:
 
                                 if lenf2>(2**40)-1:
                                     raise SystemExit
-                                #if lenf2<135:
-                                    #raise SystemExit
+                                if lenf2<1:
+                                    raise SystemExit
                                 
                                 
                                     
