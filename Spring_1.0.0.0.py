@@ -225,7 +225,7 @@ class compression:
 
                                     d=r-w
 
-                                    Bytes_row2=om-d
+                                    Bytes_row2=om+d
 
                                     szx=""
 
