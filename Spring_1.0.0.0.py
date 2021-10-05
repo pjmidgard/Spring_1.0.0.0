@@ -358,7 +358,6 @@ class compression:
                                     
 
                                     Bytes_row3=Bytes_row1-d
-                                    #print(Bytes_row1)
                                     
                                     if Bytes_row3<0:
                                          raise SystemExit
