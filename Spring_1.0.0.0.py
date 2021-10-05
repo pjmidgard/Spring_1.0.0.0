@@ -208,9 +208,42 @@ class compression:
 
                                     Spin2=0
                                     #Extract
+                                    g=1
                                     
-                                    
+                                    if g==1:
 
+                                        if sda2[lenf5-8:lenf5]=="10000000":
+
+                                            sda2=sda2[:lenf5-8]
+
+                                        elif sda2[lenf5-7:lenf5]=="1000000":
+
+                                            sda2=sda2[:lenf5-7]
+
+                                        elif sda2[lenf5-6:lenf5]=="100000":
+
+                                            sda2=sda2[:lenf5-6]
+
+                                        elif sda2[lenf5-5:lenf5]=="10000":
+
+                                            sda2=sda2[:lenf5-5]
+
+
+                                        elif sda2[lenf5-3:lenf5]=="100":
+
+                                            sda2=sda2[:lenf5-3]
+
+                                        elif sda2[lenf5-2:lenf5]=="10":
+
+                                            sda2=sda2[:lenf5-2]
+
+                                        elif sda2[lenf5-1:lenf5]=="1":
+
+                                            sda2=sda2[:lenf5-1]
+
+                                    
+                                    
+                                    sda3=sda2
                                     sda4=""
                                     sda5=""
                                     sda6=""
@@ -223,7 +256,7 @@ class compression:
                                     om=int(sda4, 2)
 
 
-                                    d=r-w
+                                    d=r-0
 
                                     Bytes_row2=om+d
 
@@ -321,7 +354,8 @@ class compression:
 
                                     count=0
 
-                                    d=r-w
+                                    d=r-0
+                                    
 
                                     Bytes_row3=Bytes_row1-d
                                     
@@ -365,6 +399,9 @@ class compression:
                                          Colaider3=szx+Colaider3
                                                                            
                                          sda4=sda4+Colaider3
+                                         
+                                         
+                                         
                                          sda6=sda4
 
                                         
@@ -431,6 +468,21 @@ class compression:
                                         wer=sda6
                                         sda4=""
                                         szx=""
+                                        
+                                        
+                                                                                                									
+
+                                        wer="1"+wer+"1"
+                                        lenf=len(wer)
+                                        #print(lenf)
+                                        xc=8-lenf%8
+                                        z=0
+                                        if xc!=0:
+                                             if xc!=8:
+                                                   while z<xc:
+                                                        szx="0"+szx
+                                                        z=z+1
+                                        wer=wer+szx
 
                                         
                                                         
