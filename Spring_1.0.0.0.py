@@ -270,7 +270,7 @@ class compression:
                                     
                                             
 
-                                    nameasr="a"+nameas
+                                    nameasr=nameas
                                                             
                                     with open(nameasr, "wb") as f3:
                                         f3.write(jl)
