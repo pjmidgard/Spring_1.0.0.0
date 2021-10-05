@@ -208,8 +208,8 @@ class compression:
                                     sda7=""
 
                                     sda4=sda3[0:48]#lenf2
-                                    sda5=sda3[48:48+30]               #Bytes_row14
-                                    sda7=sda3[48+30:]#om
+                                    sda5=sda3[48:48+32]               #Bytes_row14
+                                    sda7=sda3[48+32:]#om
                                     
                                     sda4=str(sda4)
                                     sda5=str(sda5)
