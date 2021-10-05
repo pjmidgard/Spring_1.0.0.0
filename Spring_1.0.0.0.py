@@ -282,14 +282,18 @@ class compression:
                                     lenf_count_times=lenf2*(2**480)
                                                                   
                                     k=Fraction(Bytes_row1, lenf_count_times)  
-                                    m=math.floor(k)
+                                    mi=math.floor(k)
                                    
-                                    Bytes_row12t=m*lenf_count_times
+                                    Bytes_row12t=mi*lenf_count_times
                                     Bytes_row14t=Bytes_row1-Bytes_row12t
                                     
                                     #print(Bytes_row14)
                                     
                                     #print(Bytes_row14t)
+                                    Bytes_row21=Bytes_row14t-(Bytes_row14*(2**478))
+                                    print(Bytes_row21)
+                                    
+                                    
                                     
                                     B2=(Bytes_row14*lenf_count_times)
                                     B3= B2*B2
@@ -312,16 +316,18 @@ class compression:
                                     #The colaider count information that got
                                     #n2 Long of the bytes that we got.
                                         
-                                        
+                         
+                                         
+                                         
                                          szx=""
-                                         BT=32
+                                         BT=489
                                          
   									   
   					
-                                         Colaider3=bin(round_bytes2)[2:]
+                                         Colaider3=bin(Bytes_row21)[2:]
                                          lenf=len(Colaider3)
                                          print(lenf)
-                                         if lenf>(32):
+                                         if lenf>(489):
                                          	raise SystemExit
                                        
                                          xc=BT-lenf%BT
@@ -335,6 +341,8 @@ class compression:
                                          Colaider3=szx+Colaider3
                                                                            
                                          sda4=sda4+Colaider3
+                                        
+                                                                                  
                                     
                                     #The colaider count information that got
                                     #n2 Long of the bytes that we got.
@@ -342,7 +350,7 @@ class compression:
                                          szx=""
                                          Colaider3=bin(om)[2:]
                                          lenf=len(Colaider3)
-                                         
+                                         print(lenf)
                                   
                                          xc=lenf-lenf%lenf
                                          z=0
