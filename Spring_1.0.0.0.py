@@ -256,14 +256,22 @@ class compression:
                                                         
                                     Circle_times2=Circle_times2+1
 
-                                    nameasr="a"+nameas
+                                     
+
+                                    if Circle_times2==200000:
+                                        END_working=10 
+                                    if END_working==10:
                                                         
-                                    with open(nameasr, "wb") as f3:
-                                        f3.write(jl)
-                                    x2 = time()
-                                    x3=x2-x
-                                    return print(x3)
-                                    
+                                            
+
+                                        nameasr="a"+nameas
+                                                            
+                                        with open(nameasr, "wb") as f3:
+                                            f3.write(jl)
+                                        x2 = time()
+                                        x3=x2-x
+                                        return print(x3)
+                                        
                                     
                                     
                                           ##############################################################################################################################################
@@ -349,6 +357,7 @@ class compression:
                                                                            
                                          sda4=sda4+Colaider3
                                          sda6=sda4
+
                                         
                          
                                          
@@ -433,12 +442,16 @@ class compression:
                                         sda2=sda6
                                                         
                                         Circle_times2=Circle_times2+1
+
+                                        if Circle_times2==200000:
+                                            END_working=10 
+                                        if END_working==10:
                                                         
                                         
-                                        f2.write(jl)
-                                        x2 = time()
-                                        x3=x2-x
-                                        return print(x3)
+                                            f2.write(jl)
+                                            x2 = time()
+                                            x3=x2-x
+                                            return print(x3)
 
 d=compression()
 
