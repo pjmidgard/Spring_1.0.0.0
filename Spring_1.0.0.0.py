@@ -472,7 +472,7 @@ class compression:
                                         
                                                                                                 									
 
-                                        wer="1"+wer+"1"
+                                        wer=wer+"1"
                                         lenf=len(wer)
                                         #print(lenf)
                                         xc=8-lenf%8
