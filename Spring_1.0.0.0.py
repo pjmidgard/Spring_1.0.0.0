@@ -71,7 +71,7 @@ class compression:
                             if data[0:3]!=b'\x00\x00\x00' or data[0:4]==b'\x00\x00\x00\x00'
                             raise SystemExit
                         
-                        if data[0:1]==b'\x00':
+                        elif data[0:1]==b'\x00':
                             raise SystemExit
                             
                             
