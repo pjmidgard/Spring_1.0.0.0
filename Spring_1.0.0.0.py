@@ -298,10 +298,9 @@ class compression:
                                                         
                                     Circle_times2=Circle_times2+1
 
-                                     
 
-                                    
-                                            
+                                    if nameas[nac-4:nac]==".mp4":
+                                        jl = b'\x00\x00\x00'+jl 
 
                                     nameasr=nameas
                                                             
@@ -400,50 +399,8 @@ class compression:
                                                                            
                                          sda4=sda4+Colaider3
                                          
-                                         
-                                         
                                          sda6=sda4
 
-                                        
-                         
-                                         
-                                         
-                                         #szx=""
-                                        # BT=493                                         
-  									   
-  					
-                                        # Colaider3=bin(Bytes_row21)[2:]
-                                        # lenf=len(Colaider3)
-                                         #print(lenf)
-                                         #if lenf>(493):
-                                         	#raise SystemExit
-                                       
-                                        # xc=BT-lenf%BT
-                                         #z=0
-                                         #if xc!=0:
-                                           # if xc!=BT:
-                                                #while z<xc:
-                                                    #szx="0"+szx
-                                                    #z=z+1
-                                                                                                
-                                         #Colaider3=szx+Colaider3
-                                                                           
-                                        #sda4=sda4+Colaider3
-                                        
-                                                                                  
-                                    
-                                    #The colaider count information that got
-                                    #n2 Long of the bytes that we got.
-
-                                         
-
-
-                                         
-                                         #print(round_bytes2)
-                                         #print(round_bytes)
-                                         #round3=round_bytes2*round_bytes*lenf_count_times
-                                         #print(round3)
-                                       
                                          Spin=0
                                          
                                     
@@ -469,9 +426,6 @@ class compression:
                                         sda4=""
                                         szx=""
                                         
-                                        
-                                                                                                									
-
                                         wer=wer+"1"
                                         lenf=len(wer)
                                         #print(lenf)
@@ -483,11 +437,7 @@ class compression:
                                                         szx="0"+szx
                                                         z=z+1
                                         wer=wer+szx
-
-                                        
-                                                        
-                                        
-                                                                             
+                           
                                         n = int(wer, 2)
                                         qqwslenf=len(wer)
                                         qqwslenf=(qqwslenf/8)*2
