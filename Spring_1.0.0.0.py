@@ -67,9 +67,7 @@ class compression:
                         nac=len(nameas)
                     
                     if i==1:
-                
-                            
-                            
+                        
                         nameas=name+".bin"
                     
                     nac=len(nameas)
@@ -116,7 +114,7 @@ class compression:
                         data = binary_file.read()
       
                         s=str(data)
-                        
+
                         if name[nac-4:nac]==".mp4":
                             if data[0:3]!=b'\x00\x00\x00' or data[0:4]==b'\x00\x00\x00\x00':
                                 raise SystemExit
@@ -251,15 +249,14 @@ class compression:
                                             sda2=sda2[:lenf5-1]
 
                                     
-                           
+                                    
                                     sda3=sda2
                                     sda4=""
                                     sda5=""
                                     sda6=""
                                     sda7=""
-                                    
-                                    
-                                    
+
+                                    sda4=sda3[0:]#lenf2
                                     
                                     sda4=str(sda4)
                                     
@@ -268,12 +265,7 @@ class compression:
 
                                     d=r-0
 
-                                    sda4=sda3[1:]#lenf2
-                                    if sda3[0:1]=="0":
-                                        d=d+d+d
-                                    if sda3[0:1]=="1":
-                                        Bytes_row2=om+d
-
+                                    Bytes_row2=om+d
 
                                     szx=""
 
@@ -374,12 +366,7 @@ class compression:
                                     Bytes_row3=Bytes_row1-d
                                     
                                     if Bytes_row3<0:
-                                         p_or_m1=0
-                                         p_or_m2="0"
-                                    if Bytes_row3>=0:
-                                         p_or_m1=1
-                                         p_or_m2="1"
-                                         
+                                         raise SystemExit
                                         
 
                                  
@@ -400,20 +387,13 @@ class compression:
 
 
                                          szx=""
-                                         if p_or_m1==1:
-                                             Colaider3=bin(Bytes_row3)[2:]
-                                         if p_or_m1==0:
-                                             Colaider3=bin(Bytes_row3)[3:]
-
-
-								
-
                                          
-                                         
+
+                                         Colaider3=bin(Bytes_row3)[2:]
                                          lenf=len(Colaider3)
                                          #print(lenf)
                                          
-                                         
+                                       
                                          xc=lenf-lenf%lenf
                                          z=0
                                          if xc!=0:
@@ -422,7 +402,7 @@ class compression:
                                                     szx="0"+szx
                                                     z=z+1
                                                                                                 
-                                         Colaider3=p_or_m2+szx+Colaider3
+                                         Colaider3=szx+Colaider3
                                                                            
                                          sda4=sda4+Colaider3
                                          
