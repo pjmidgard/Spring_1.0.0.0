@@ -1,6 +1,8 @@
 # Spring_1.0.0.0
 Spring_1.0.0.0
 
+Program compression not any.
+
 Speed: 3MB+/s
 
 #develop: Jurijus Pacalovas
