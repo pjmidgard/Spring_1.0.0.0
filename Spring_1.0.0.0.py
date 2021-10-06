@@ -401,9 +401,9 @@ class compression:
 
                                          szx=""
                                          if p_or_m1==1:
-                                             Colaider3=bin(Bytes_row2)[2:]
+                                             Colaider3=bin(Bytes_row3)[2:]
                                          if p_or_m1==0:
-                                             Colaider3=bin(Bytes_row2)[3:]
+                                             Colaider3=bin(Bytes_row3)[3:]
 
 
 								
