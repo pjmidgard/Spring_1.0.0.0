@@ -118,6 +118,12 @@ class compression:
                     nac=len(nameas)
 
                     if i==2:
+                        iii=0
+
+                        if nameas[nac-8:nac]!=".bin.bin":
+                            iii=1
+                            
+                            
                         if nameas[nac-4:nac]!=".bin":
                              print("Program close because this is file is not .bin")
                              raise SystemExit
@@ -283,7 +289,7 @@ class compression:
                                     if sda2[0:1]=="0":
                                         g=1
 
-                                    if g==2:
+                                    if g==2 and iii==1:
                                         x=0
                                         x1=0
                                         x2=0
@@ -297,7 +303,7 @@ class compression:
                                         blockw1=4
                                         nameas=name
                                         nac=len(nameas)
-                                        if nameas[nac-4:nac]==".bin":
+                                        if nameas[nac-8:nac]==".bin.bin":
                                             nameas=nameas[0:nac-8]
                                         countraz=0
                                         
@@ -655,7 +661,7 @@ class compression:
                                                     x3 = x2-x
                                                     return print(x3) 
                                     
-                                    if g==1:
+                                    if g==1 and iii!=1:
 
                                         sda3=sda2
                                         sda2=sda2[1:]
@@ -1266,18 +1272,12 @@ class compression:
                                         jl2=binascii.unhexlify('%x' % n)
 
                                         
-                                      
-                                            
-                                            
-                                        if jl2<=jl1:
-                                            jl=jl2
-
-
-                                        elif jl1<jl2:
-                                            jl=jl1
-                                           
+                                        nameas1=nameas+".bin"
                                         
-                                        f2.write(jl)
+                                        with open(nameas1, "wb") as f4:
+                                            f4.write(jl1)
+                                        
+                                        f2.write(jl2)
                                         x2 = time()
                                         x3=x2-x
                                         return print(x3)
