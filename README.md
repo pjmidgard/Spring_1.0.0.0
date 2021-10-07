@@ -3,7 +3,7 @@ Spring_1.0.0.0
 
 Speed: 100Bytes-3MB+/s
 
-#I have developed a program in Python Jurijus Pacalovas.
+Developed: Jurijus Pacalovas.
 
 Presentation:
 
