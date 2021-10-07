@@ -120,7 +120,7 @@ class compression:
                     if i==2:
                         iii=0
 
-                        if nameas[nac-8:nac]==".bin.bin":
+                        if nameas[nac-3:nac]==".b2":
                             iii=1
                             
                             
@@ -1272,7 +1272,7 @@ class compression:
                                         jl2=binascii.unhexlify('%x' % n)
 
                                         
-                                        nameas1=nameas+".bin"
+                                        nameas1=name+".b2"
                                         
                                         with open(nameas1, "wb") as f4:
                                             f4.write(jl1)
