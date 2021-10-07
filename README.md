@@ -1,7 +1,7 @@
 # Spring_1.0.0.0
 Spring_1.0.0.0
 
-Speed: 3MB+/s
+Speed: 100Bytes-3MB+/s
 
 #I have developed a program in Python Jurijus Pacalovas.
 
