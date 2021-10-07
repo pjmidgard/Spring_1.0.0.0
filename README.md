@@ -19,6 +19,7 @@ Bytes_row3=Bytes_row1-d
 extract:
 d=r-0
 Bytes_row2=om+d
+
 Also, I used 14bits for compression like calculus.
 
 Bye, bye.
