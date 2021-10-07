@@ -1275,9 +1275,9 @@ class compression:
                                         nameas1=name+".b2"
                                         
                                         with open(nameas1, "wb") as f4:
-                                            f4.write(jl1)
+                                            f4.write(jl2)
                                         
-                                        f2.write(jl2)
+                                        f2.write(jl1)
                                         x2 = time()
                                         x3=x2-x
                                         return print(x3)
