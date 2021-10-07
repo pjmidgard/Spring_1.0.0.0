@@ -120,11 +120,11 @@ class compression:
                     if i==2:
                         iii=0
 
-                        if nameas[nac-8:nac]!=".bin.bin":
+                        if nameas[nac-8:nac]==".bin.bin":
                             iii=1
                             
                             
-                        if nameas[nac-4:nac]!=".bin":
+                        if nameas[nac-4:nac]!=".bin" and iii!=1:
                              print("Program close because this is file is not .bin")
                              raise SystemExit
                         
