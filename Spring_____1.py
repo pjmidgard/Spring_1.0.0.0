@@ -1103,7 +1103,7 @@ class compression:
                                     Bytes_row1=int(sda2, 2)
 
                                     count=0
-                                    code=0
+                                    
                                     
                                     
                                     
