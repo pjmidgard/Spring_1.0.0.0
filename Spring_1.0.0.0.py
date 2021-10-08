@@ -1113,6 +1113,8 @@ class compression:
                                         code=code+1
                                     print("Your code is: ")
                                     print(code)
+                                    import os
+                                    os.system("pause")
                                     code=code-2
                                     Bytes_row3=Bytes_row1-(code*code*2**code)
                                     
