@@ -1103,11 +1103,19 @@ class compression:
                                     Bytes_row1=int(sda2, 2)
 
                                     count=0
+
+                                    code=0
+                                    Bytes_row4=1
+                                    while Bytes_row4>0:
+                                        Bytes_row4=Bytes_row1-(code*code*2**code)
+                                        code=code+1
+                                    code=code-2
+
+                                    print("Your code is:
                                     
-                                    
-                                    
-                                    
-                                    
+                                    print(code)
+                                    import os
+                                    os.system("pause")
                                     Bytes_row3=Bytes_row1-(code*code*2**code)
                                     
                                     if Bytes_row3<0:
