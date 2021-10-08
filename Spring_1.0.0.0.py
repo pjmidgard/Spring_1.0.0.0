@@ -1008,7 +1008,7 @@ class compression:
                                     sda4=str(sda4)
                                     
                                     om=int(sda4, 2)
-                                    
+                                    code=code-2
                                     Bytes_row2=om+(code*code*2**code)
 
                                     szx=""
@@ -1103,9 +1103,18 @@ class compression:
                                     Bytes_row1=int(sda2, 2)
 
                                     count=0
-
+                                    code=0
+                                    Bytes_row3=1
+                                    
+                                    
+                                    while Bytes_row3>0:
+                                        
+                                        Bytes_row3=Bytes_row1-(code*code*2**code)
+                                        code=code+1
+                                    print("Your code is: ")
+                                    print(code)
+                                    code=code-2
                                     Bytes_row3=Bytes_row1-(code*code*2**code)
-                                    #print(Bytes_row3)
                                     
                                     if Bytes_row3<0:
                                          raise SystemExit
