@@ -1111,7 +1111,7 @@ class compression:
                                         code=code+1
                                     code=code-2
 
-                                    print("Your code is:
+                                    print("Your code is:")
                                     
                                     print(code)
                                     import os
