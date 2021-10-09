@@ -1144,7 +1144,7 @@ class compression:
 
                                          Colaider3=bin(Bytes_row3)[2:]
                                          lenf=len(Colaider3)
-                                         #print(lenf)
+                                         print(lenf)
                                          
                                        
                                          xc=lenf-lenf%lenf
