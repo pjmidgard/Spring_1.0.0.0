@@ -1009,7 +1009,7 @@ class compression:
                                     
                                     om=int(sda4, 2)
                                     
-                                    Bytes_row2=om+((code*code*2**code)*code)
+                                    Bytes_row2=om+(((code*code*2**code)*code)*8)
 
                                     szx=""
 
@@ -1107,7 +1107,7 @@ class compression:
                                     code=0
                                     Bytes_row4=1
                                     while Bytes_row4>0:
-                                        Bytes_row4=Bytes_row1-((code*code*2**code)*code)
+                                        Bytes_row4=Bytes_row1-(((code*code*2**code)*code)*8)
                                         code=code+1
                                     code=code-2
 
@@ -1116,7 +1116,7 @@ class compression:
                                     print(code)
                                     import os
                                     os.system("pause")
-                                    Bytes_row3=Bytes_row1-((code*code*2**code)*code)
+                                    Bytes_row3=Bytes_row1-(((code*code*2**code)*code)*8)
                                     
                                     if Bytes_row3<0:
                                          raise SystemExit
@@ -1144,7 +1144,7 @@ class compression:
 
                                          Colaider3=bin(Bytes_row3)[2:]
                                          lenf=len(Colaider3)
-                                         #print(lenf)
+                                         print(lenf)
                                          
                                        
                                          xc=lenf-lenf%lenf
