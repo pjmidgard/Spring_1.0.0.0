@@ -19,6 +19,6 @@ extract:
 d=r-0
 Bytes_row2=om+(code * code ** code)
 
-Also, I used 14bits for compression like calculus.
+Also, I used 14bits for compression like calculus and incription.
 
 Bye, bye.
