@@ -1122,6 +1122,7 @@ class compression:
                                     import sys
 
                                     u=0
+                                    print("Your code is: ")
                                     for u in range(4):
                                         code=0
                                         Bytes_row4=1
