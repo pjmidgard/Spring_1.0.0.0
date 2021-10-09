@@ -3,6 +3,7 @@ cvf=0
 Portal=2
 import os
 import binascii
+import sys
 
 zzaax=""
 szxzzzas=""
@@ -1118,6 +1119,7 @@ class compression:
                                     Bytes_row1=int(sda2, 2)
 
                                     count=0
+                                    import sys
 
                                     u=0
                                     for u in range(4):
@@ -1127,14 +1129,15 @@ class compression:
                                             Bytes_row4=Bytes_row1-(code*code*2**code)
                                             code=code+1
                                         code=code-2
-
-                                        print("Your code is:")
-                                        print(u)
+                                        right_aligned_number = f"{code:>5}"
+                                        sys.stdout.write(right_aligned_number)                              
                                         
-                                        print(code)
+                                  
+                                 
+                                        
                                         
                                         Bytes_row1=Bytes_row1-(code*code*2**code)
-
+                                    print()
                                     import os
                                     os.system("pause")
                                     
