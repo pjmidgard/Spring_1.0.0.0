@@ -777,7 +777,7 @@ class compression:
     def cryptograpy_compression2(self):
                 
                 self.name = "Written: Jurijus pacalovas Date: 29/09/2021 18:06"
-                code = int(input("Please, enter the code? "))
+                
                 if namez=="c" or namez=="e":
                     if namez=="c":
                         i=1
@@ -1008,12 +1008,17 @@ class compression:
                                     sda4=str(sda4)
                                     
                                     om=int(sda4, 2)
+
+                                    u=0
+                                    for u in range(4):
+                                        code = int(input("Please, enter the code? "))
+                                        print(u)
                                     
-                                    Bytes_row2=om+(code*code*2**code)
+                                        om=om+(code*code*2**code)
 
                                     szx=""
 
-                                    Colaider3=bin(Bytes_row2)[2:]
+                                    Colaider3=bin(om)[2:]
                                     lenf=len(Colaider3)
                                     
                                
@@ -1104,22 +1109,26 @@ class compression:
 
                                     count=0
 
-                                    code=0
-                                    Bytes_row4=1
-                                    while Bytes_row4>0:
-                                        Bytes_row4=Bytes_row1-(code*code*2**code)
-                                        code=code+1
-                                    code=code-2
+                                    u=0
+                                    for u in range(4):
+                                        code=0
+                                        Bytes_row4=1
+                                        while Bytes_row4>0:
+                                            Bytes_row4=Bytes_row1-(code*code*2**code)
+                                            code=code+1
+                                        code=code-2
 
-                                    print("Your code is:")
-                                    
-                                    print(code)
+                                        print("Your code is:")
+                                        print(u)
+                                        
+                                        print(code)
+                                        
+                                        Bytes_row1=Bytes_row1-(code*code*2**code)
+
                                     import os
                                     os.system("pause")
-                                    Bytes_row3=Bytes_row1-(code*code*2**code)
                                     
-                                    if Bytes_row3<0:
-                                         raise SystemExit
+                                   
                                         
 
                                  
@@ -1142,7 +1151,7 @@ class compression:
                                          szx=""
                                          
 
-                                         Colaider3=bin(Bytes_row3)[2:]
+                                         Colaider3=bin(Bytes_row1)[2:]
                                          lenf=len(Colaider3)
                                          print(lenf)
                                          
