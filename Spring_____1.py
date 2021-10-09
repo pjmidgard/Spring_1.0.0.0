@@ -1008,13 +1008,23 @@ class compression:
                                     sda4=str(sda4)
                                     
                                     om=int(sda4, 2)
-
-                                    u=0
-                                    for u in range(4):
-                                        code = int(input("Please, enter the code? "))
-                                        print(u)
+                                  
+                               
                                     
-                                        om=om+(code*code*2**code)
+                                    
+                                    
+                                    a, b, c, d = input("Enter a three value: ").split()
+                                    a=int(a)
+                                    om=om+(a*a*2**a)
+                                    b=int(b)
+                                    om=om+(b*b*2**b)
+                                    c=int(c)
+                                    om=om+(c*c*2**c)
+                                    d=int(d)
+                                    om=om+(d*d*2**d)
+
+
+
 
                                     szx=""
 
