@@ -777,9 +777,10 @@ class compression:
                             return print(x3)
 
     def cryptograpy_compression2(self):
-                a, b, c, d, e, f, g, h = input("Enter a the deep eight numbers: ").split()
+                a, b, c, d, e, f, g, h, a1 = input("Enter a the deep nine numbers: ").split()
                 
                 a=int(a)
+                a1=int(a1)
                 b=int(b)
                 c=int(c)
                 d=int(d)
@@ -929,6 +930,15 @@ class compression:
                                     data=jl
                                   
                                     lenf5=len(data)
+
+                                    if a1==1 and i==2:
+                                        import brotlicffi
+                                        data=brotlicffi.decompress(data)
+
+                                    if a1==1 and i==1:
+                                        import brotlicffi
+                                        data=brotlicffi.compress(data)
+                                        
 
                                     sda=bin(int(binascii.hexlify(data),16))[2:]
                                     lenf=len(sda)
@@ -1143,6 +1153,9 @@ class compression:
                                    
                                     u=0
                                     code=lenf4-a
+
+                                    
+                                        
                                    
                                     for u in range(30):
 
