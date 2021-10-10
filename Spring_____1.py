@@ -1020,13 +1020,13 @@ class compression:
                                        
                                         Bytes_row4=1
                                         if u==0:
-                                        	code=lenf4-27
+                                        	code=lenf2-30
                                         if u==1:
-                                        	code=lenf4-27-5
+                                        	code=lenf2-31
                                         if u==2:
-                                        	code=lenf4-27-5-1
+                                        	code=lenf2-32
                                         if u==3:
-                                        	code=lenf4-27-5-3
+                                        	code=lenf2-35
                               
                                         
                     
@@ -1130,21 +1130,22 @@ class compression:
                                        
                                         Bytes_row4=1
                                         if u==0:
-                                        	code=lenf2-27
+                                        	code=lenf2-30
                                         if u==1:
-                                        	code=lenf2-27-5
+                                        	code=lenf2-31
                                         if u==2:
-                                        	code=lenf2-27-5-1
+                                        	code=lenf2-32
                                         if u==3:
-                                        	code=lenf2-27-5-3
+                                        	code=lenf2-35
                                        
                               
                                       
                     
                                         Bytes_row1=Bytes_row1-(code*code*2**code)
-                                 
+                                    
                                     if Bytes_row1<0:
                                     		  raise SystemExit
+                                    	
                                     	
                                     Spin=1
                                 
