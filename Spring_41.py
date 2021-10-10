@@ -1152,7 +1152,7 @@ class compression:
                                     lenf4=lenf2+8
                                    
                                     u=0
-                                    code=lenf4-a
+                                    code=lenf2-a
 
                                     
                                         
@@ -1169,7 +1169,7 @@ class compression:
 
                                         if u==h:
                                             code=code+e
-                                        Bytes_row1=Bytes_row1+2**code
+                                        Bytes_row1=Bytes_row1-2**code
                                    
                                     
                                     if Bytes_row1<0:
