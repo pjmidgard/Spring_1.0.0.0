@@ -1023,8 +1023,6 @@ class compression:
                                     sda4=str(sda4)
                                     
                                     Bytes_row1 =int(sda4, 2)
-                                    
-                                    u=0
                                     lenf7=len(data)
                                     lenf4=(lenf7*8)+8
                                   
@@ -1141,6 +1139,7 @@ class compression:
                                     Bytes_row1=int(sda2, 2)
 
                                     count=0
+                                    lenf4=lenf2+8
                                    
                                     u=0
                                     code=lenf4-a
@@ -1240,9 +1239,9 @@ class compression:
                                         sssssw=len(jl)
                                         
                                         lenf7=len(data)
-                                        lenf4=lenf7
+                                      
                                   
-                                        lenf8=lenf4-1
+                                        lenf8=lenf7-1
                                         print(sssssw)
                                         if lenf8!=sssssw:
                                             raise SystemExit
