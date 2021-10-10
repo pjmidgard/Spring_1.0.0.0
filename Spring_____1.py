@@ -1019,7 +1019,7 @@ class compression:
                                     u=0
                                     code=lenf4-deep
                                    
-                                    for u in range(3000):
+                                    for u in range(30):
 
                                         
                                        
@@ -1132,7 +1132,7 @@ class compression:
                                    
                                     u=0
                                     code=lenf2-deep
-                                    for u in range(3000):
+                                    for u in range(30):
 
                                         
                                        
