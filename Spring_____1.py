@@ -777,6 +777,7 @@ class compression:
                             return print(x3)
 
     def cryptograpy_compression2(self):
+                deep = int(input("Enter a the deep: "))
                 
                 self.name = "Written: Jurijus pacalovas Date: 29/09/2021 18:06"
                 
@@ -1024,7 +1025,7 @@ class compression:
                                        
                                         code=code-1
                                         if u==5:
-                                            code=code-1
+                                            code=code-deep
                                         if u==7:
                                             code=code+1
 
@@ -1137,7 +1138,7 @@ class compression:
                                        
                                         code=code-1
                                         if u==5:
-                                            code=code-1
+                                            code=code-deep
                                         if u==7:
                                             code=code+1
 
