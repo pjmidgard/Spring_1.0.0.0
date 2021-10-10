@@ -15,10 +15,10 @@ I had read literature about compressions like RLE, Huffman, PI, and API. I start
 I use formula:
 
 compression:
-Bytes_row3=Bytes_row1-2**code
+Bytes_row3=Bytes_row1-2 ** code
 extract:
 d=r-0
-Bytes_row3=Bytes_row1-2**code
+Bytes_row3=Bytes_row1-2 ** code
 
 Also, I used 14bits for compression like calculus and incription.
 
