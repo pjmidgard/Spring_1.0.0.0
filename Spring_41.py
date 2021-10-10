@@ -777,14 +777,10 @@ class compression:
                             return print(x3)
 
     def cryptograpy_compression2(self):
-                a, b, c, d, e, f, g, h, a1 = input("Enter a the deep nine numbers: ").split()
+                a, f, g, h, a1 = input("Enter a the deep 5 numbers: ").split()
                 
                 a=int(a)
                 a1=int(a1)
-                b=int(b)
-                c=int(c)
-                d=int(d)
-                e=int(e)
                 f=int(f)
                 g=int(g)
                 h=int(h)
@@ -1037,20 +1033,20 @@ class compression:
                                     lenf4=(lenf7*8)+8
                                   
                                     u=0
-                                    code=lenf4-a
+                                    code=lenf4-1
                                    
                                     for u in range(30):
 
                                         
                                        
-                                        code=code-b
+                                        code=code-1
                                         if u==f:
-                                            code=code-c
+                                            code=code-1
                                         if u==g:
-                                            code=code+d
+                                            code=code+1
 
                                         if u==h:
-                                            code=code+e
+                                            code=code+1
                                         Bytes_row1=Bytes_row1+2**code
                                    
                                     	
@@ -1161,14 +1157,14 @@ class compression:
 
                                         
                                        
-                                        code=code-b
+                                        code=code-1
                                         if u==f:
-                                            code=code-c
+                                            code=code-1
                                         if u==g:
-                                            code=code+d
+                                            code=code+1
 
                                         if u==h:
-                                            code=code+e
+                                            code=code+1
                                         Bytes_row1=Bytes_row1-2**code
                                    
                                     
