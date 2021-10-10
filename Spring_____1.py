@@ -1017,7 +1017,7 @@ class compression:
                                     lenf4=(lenf7*8)+8
                                   
                                     u=0
-                                    code=lenf4
+                                    code=lenf4-deep
                                    
                                     for u in range(3000):
 
@@ -1025,7 +1025,7 @@ class compression:
                                        
                                         code=code-1
                                         if u==5:
-                                            code=code-deep
+                                            code=code-1
                                         if u==7:
                                             code=code+1
 
@@ -1131,14 +1131,14 @@ class compression:
                                     count=0
                                    
                                     u=0
-                                    code=lenf2
+                                    code=lenf2-deep
                                     for u in range(3000):
 
                                         
                                        
                                         code=code-1
                                         if u==5:
-                                            code=code-deep
+                                            code=code-1
                                         if u==7:
                                             code=code+1
 
