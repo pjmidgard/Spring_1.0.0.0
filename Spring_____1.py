@@ -1015,18 +1015,25 @@ class compression:
                                     lenf7=len(data)
                                     lenf4=(lenf7*8)+8
                                   
-                                    for u in range(4):
+                                    for u in range(6):
                                         
                                        
                                         Bytes_row4=1
                                         if u==0:
-                                        	code=lenf2-30
+                                        	code=lenf2-27
                                         if u==1:
-                                        	code=lenf2-31
+                                        	code=lenf2-28
                                         if u==2:
-                                        	code=lenf2-32
+                                        	code=lenf2-29
                                         if u==3:
-                                        	code=lenf2-35
+                                        	code=lenf2-30
+                                        if u==4:
+                                        	code=lenf2-31
+                                        if u==5:
+                                        	code=lenf2-32
+                                        if u==6:
+                                        	code=lenf2-33
+                                        	
                               
                                         
                     
@@ -1126,17 +1133,26 @@ class compression:
                                     count=0
                                    
                                     u=0
-                                    for u in range(4):
+                                    for u in range(6):
                                        
                                         Bytes_row4=1
                                         if u==0:
-                                        	code=lenf2-30
+                                        	code=lenf2-27
                                         if u==1:
-                                        	code=lenf2-31
+                                        	code=lenf2-28
                                         if u==2:
-                                        	code=lenf2-32
+                                        	code=lenf2-29
                                         if u==3:
-                                        	code=lenf2-35
+                                        	code=lenf2-30
+                                        if u==4:
+                                        	code=lenf2-31
+                                        if u==5:
+                                        	code=lenf2-32
+                                        if u==6:
+                                        	code=lenf2-33
+                                        	
+                                       
+                                       
                                        
                               
                                       
@@ -1221,11 +1237,9 @@ class compression:
                                         lenf7=len(data)
                                         lenf4=lenf7
                                   
-                                        lenf8=lenf4-1
+                                        lenf8=lenf4
                                         
-                                        
-                                        if lenf8!=sssssw:
-                                        	  raise SystemExit
+                                      
                                         	
 
                                                         
