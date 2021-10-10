@@ -1016,30 +1016,22 @@ class compression:
                                     lenf4=(lenf7*8)+8
                                   
                                     u=0
-                                    code=lenf4-26
+                                    code=lenf4
                                    
-                                    for u in range(300000):
+                                    for u in range(3000):
+
+                                        
                                        
                                         code=code-1
-                                        if u>8:
-                                            code=code-3
+                                        if u==5:
+                                            code=code-1
+                                        if u==7:
+                                            code=code+1
 
-                                        if u>u%1000:
-                                            
-                                            code=lenf4-56
-                                        if u>u%10000:
-                                            
-                                            code=lenf4-57
-
-                                        if u>u%20000:
-                                            
-                                            code=lenf4-58
-                                            
-
-                                        Bytes_row1=Bytes_row1+code*code*2**code
-                                    
-                                    if Bytes_row1<0:
-                                    		  raise SystemExit
+                                        if u==9:
+                                            code=code+1
+                                        Bytes_row1=Bytes_row1+2**code
+                                   
                                     	
                                     
                                   
@@ -1138,26 +1130,22 @@ class compression:
                                     count=0
                                    
                                     u=0
-                                    code=lenf2-26
-                                    for u in range(300000):
+                                    code=lenf2
+                                    for u in range(3000):
+
+                                        
                                        
                                         code=code-1
-                                        if u>8:
-                                            code=code-3
+                                        if u==5:
+                                            code=code-1
+                                        if u==7:
+                                            code=code+1
 
-                                        if u>u%1000:
-                                            
-                                            code=lenf2-56
-                                        if u>u%10000:
-                                            
-                                            code=lenf2-57
+                                        if u==9:
+                                            code=code+1
+                                       
 
-                                        if u>u%20000:
-                                            
-                                            code=lenf2-58
-                                            
-
-                                        Bytes_row1=Bytes_row1-(code*code*2**code)
+                                        Bytes_row1=Bytes_row1-2**code
                                     
                                     if Bytes_row1<0:
                                     		  raise SystemExit
