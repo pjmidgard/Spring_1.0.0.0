@@ -567,6 +567,7 @@ class compression:
                                 raise SystemExit
                             s=str(data)
                             lenf=len(data)
+                            lenf7=len(data)
                         sda=bin(int(binascii.hexlify(data),16))[2:]
                         szx=""
                         lenf=len(sda)
@@ -1008,28 +1009,32 @@ class compression:
                                     
                                     sda4=str(sda4)
                                     
-                                    om=int(sda4, 2)
+                                    Bytes_row1 =int(sda4, 2)
+                                    
+                                    u=0
+                                    lenf7=len(data)
+                                    lenf4=(lenf7*8)+8
                                   
-                               
-                                    
-                                    
-                                    
-                                    a, b, c, d = input("Enter a three value: ").split()
-                                    a=int(a)
-                                    om=om+(a*a*2**a)
-                                    b=int(b)
-                                    om=om+(b*b*2**b)
-                                    c=int(c)
-                                    om=om+(c*c*2**c)
-                                    d=int(d)
-                                    om=om+(d*d*2**d)
-
-
-
-
+                                    for u in range(4):
+                                        
+                                       
+                                        Bytes_row4=1
+                                        if u==0:
+                                        	code=lenf4-27
+                                        if u==1:
+                                        	code=lenf4-27-5
+                                        if u==2:
+                                        	code=lenf4-27-5-1
+                                        if u==3:
+                                        	code=lenf4-27-5-3
+                              
+                                        
+                    
+                                        Bytes_row1=Bytes_row1+(code*code*2**code)
+                                       
                                     szx=""
 
-                                    Colaider3=bin(om)[2:]
+                                    Colaider3=bin(Bytes_row1)[2:]
                                     lenf=len(Colaider3)
                                     
                                
@@ -1119,53 +1124,36 @@ class compression:
                                     Bytes_row1=int(sda2, 2)
 
                                     count=0
-                                    import sys
-
-                                    u=0
-                                    print("Your code is: ")
-                                    for u in range(4):
-                                        code=0
-                                        Bytes_row4=1
-                                        while Bytes_row4>0:
-                                            Bytes_row4=Bytes_row1-(code*code*2**code)
-                                            code=code+1
-                                        code=code-2
-                                        right_aligned_number = f"{code:>5}"
-                                        sys.stdout.write(right_aligned_number)                              
-                                        
-                                  
-                                 
-                                        
-                                        
-                                        Bytes_row1=Bytes_row1-(code*code*2**code)
-                                    print()
-                                    import os
-                                    os.system("pause")
-                                    
                                    
-                                        
-
+                                    u=0
+                                    for u in range(4):
+                                       
+                                        Bytes_row4=1
+                                        if u==0:
+                                        	code=lenf2-27
+                                        if u==1:
+                                        	code=lenf2-27-5
+                                        if u==2:
+                                        	code=lenf2-27-5-1
+                                        if u==3:
+                                        	code=lenf2-27-5-3
+                                       
+                              
+                                      
+                    
+                                        Bytes_row1=Bytes_row1-(code*code*2**code)
                                  
+                                    if Bytes_row1<0:
+                                    		  raise SystemExit
+                                    	
                                     Spin=1
-                                    
-                 
-                                    
-                                    
-                                        
-                                    #if  -1 count + round add then this to this number
-                                    
+                                
                                     if Spin==1:
                                          
-                                        
-                                         
-                                    #The colaider count information that got
-                                    #n2 Long of the bytes that we got.
-
-
                                          szx=""
                                          
-
-                                         Colaider3=bin(Bytes_row1)[2:]
+                                         mi=bin(Bytes_row1)[2:]
+                                         Colaider3=mi
                                          lenf=len(Colaider3)
                                          print(lenf)
                                          
@@ -1228,6 +1216,16 @@ class compression:
                                         qqwslenf="%0"+qqwslenf+"x"
                                         jl=binascii.unhexlify(qqwslenf % n)
                                         sssssw=len(jl)
+                                        
+                                        lenf7=len(data)
+                                        lenf4=lenf7
+                                  
+                                        lenf8=lenf4-1
+                                        
+                                        
+                                        if lenf8!=sssssw:
+                                        	  raise SystemExit
+                                        	
 
                                                         
                                         Circle_times=Circle_times+1
