@@ -777,8 +777,20 @@ class compression:
                             return print(x3)
 
     def cryptograpy_compression2(self):
-                deep = int(input("Enter a the deep: "))
+                a, b, c, d, e, f, g, h = input("Enter a the deep eight numbers: ").split()
                 
+                a=int(a)
+                b=int(b)
+                c=int(c)
+                d=int(d)
+                e=int(e)
+                f=int(f)
+                g=int(g)
+                h=int(h)
+                
+                
+                
+        
                 self.name = "Written: Jurijus pacalovas Date: 29/09/2021 18:06"
                 
                 if namez=="c" or namez=="e":
@@ -1017,20 +1029,20 @@ class compression:
                                     lenf4=(lenf7*8)+8
                                   
                                     u=0
-                                    code=lenf4-deep
+                                    code=lenf4-a
                                    
                                     for u in range(30):
 
                                         
                                        
-                                        code=code-1
-                                        if u==5:
-                                            code=code-1
-                                        if u==7:
-                                            code=code+1
+                                        code=code-b
+                                        if u==f:
+                                            code=code-c
+                                        if u==g:
+                                            code=code+d
 
-                                        if u==9:
-                                            code=code+1
+                                        if u==h:
+                                            code=code+e
                                         Bytes_row1=Bytes_row1+2**code
                                    
                                     	
@@ -1131,22 +1143,22 @@ class compression:
                                     count=0
                                    
                                     u=0
-                                    code=lenf2-deep
+                                    code=lenf4-a
+                                   
                                     for u in range(30):
 
                                         
                                        
-                                        code=code-1
-                                        if u==5:
-                                            code=code-1
-                                        if u==7:
-                                            code=code+1
+                                        code=code-b
+                                        if u==f:
+                                            code=code-c
+                                        if u==g:
+                                            code=code+d
 
-                                        if u==9:
-                                            code=code+1
-                                       
-
-                                        Bytes_row1=Bytes_row1-2**code
+                                        if u==h:
+                                            code=code+e
+                                        Bytes_row1=Bytes_row1+2**code
+                                   
                                     
                                     if Bytes_row1<0:
                                     		  raise SystemExit
