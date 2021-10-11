@@ -307,12 +307,12 @@ class compression:
                                             
                                             
                                             el=eo
-                                            eo=eo+2523105
+                                            eo=eo+2523092
                                             takebitsize=sda[el:eo]
                                             xssd=len(takebitsize)
-                                            el=eo-2523105
-                                            eo=eo-2523105
-                                            if xssd<=2523104:
+                                            el=eo-2523092
+                                            eo=eo-2523092
+                                            if xssd<=2523092:
                                                 wer=wer+takebitsize
                                                    
                                                 n = int(wer, 2)
@@ -386,8 +386,8 @@ class compression:
                                             ddr=len(wers)
                                             
                                             sw=0
-                                            el1=2523108
-                                            eo1=2523108
+                                            el1=2523092
+                                            eo1=2523092
                                            
                                             while sw<180222:
                                                     
@@ -562,9 +562,9 @@ class compression:
                         with open(name, "rb") as binary_file:
                             data = binary_file.read()
                             lenf1=len(data)
-                            if lenf1<400000:
-                                print("This file is too small");
-                                raise SystemExit
+                            #if lenf1<400000:
+                                #print("This file is too small");
+                                #raise SystemExit
                             s=str(data)
                             lenf=len(data)
                             lenf7=len(data)
