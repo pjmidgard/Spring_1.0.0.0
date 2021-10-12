@@ -409,10 +409,7 @@ class compression:
                                             
 
 
-                                            ei1=ei1+16
-                                            ei2=ei2+16
-                                            eie1=ei1+16
-                                            eie2=ei2+16
+                                       
 
                                         
                                         
@@ -450,18 +447,19 @@ class compression:
                                                                                        
                                             sda6=sda6+Colaider3
                                         else:
-                                            sda7=sda2[ei1:ei1+16]
+                                         
                                             
                                             sda6=sda6+sda7
-
-
+                                            
                                             ei1=ei1+16
                                             ei2=ei2+16
                                             eie1=ei1+16
                                             eie2=ei2+16
+
+
                                             
 
-                                    wer=sda6[0:Size]
+                                    wer=sda6[16:Size+16]
 
                                     n = int(wer, 2)
                                     qqwslenf=len(wer)
