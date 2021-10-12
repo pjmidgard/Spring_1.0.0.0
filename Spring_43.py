@@ -642,6 +642,7 @@ class compression:
                                                 sda4=sda4+Minus_bytes+mi3
 
                                             else:
+                                                Minus_bytes="11"
                                                 
                                                 sda4=sda4+Minus_bytes+sda3
                                                 
@@ -738,4 +739,4 @@ class compression:
 d=compression()
 
 xw=d.cryptograpy_compression2()
-print(xw)
+print(xw)		
