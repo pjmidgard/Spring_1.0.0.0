@@ -239,12 +239,12 @@ class compression:
                                             sda2=sda2[:lenf5-1]
 
                                     
-                                    sda8=sda2[0:40]
+                                    sda8=sda2[0:48]
                                     Bytes_row6 =int(sda8, 2)
                                     
-                                    sda2=sda2[40:]
+                                    sda2=sda2[48:]
                                     
-                                    sda3=sda2[40:]
+                                    sda3=sda2[48:]
                                     sda4=""
                                     sda5=""
                                     sda6=""
