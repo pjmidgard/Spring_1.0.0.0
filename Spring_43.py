@@ -458,7 +458,7 @@ class compression:
 
                                             
 
-                                    wer=sda6[16:Size+16]
+                                    wer=sda6[0:Size]
 
                                     n = int(wer, 2)
                                     qqwslenf=len(wer)
