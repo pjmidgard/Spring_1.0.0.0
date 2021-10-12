@@ -398,10 +398,6 @@ class compression:
 
                                         if sda3[0:2]=="11":
 
-                                            ei1=ei1+2
-                                            ei2=ei2+2
-                                            eie1=ei1+2
-                                            eie2=ei2+2
                                             
                                             
                                             sda7=sda2[ei1:ei1+16]
@@ -642,6 +638,7 @@ class compression:
                                                 sda4=sda4+Minus_bytes+mi3
 
                                             else:
+                                                
                                                 
                                                 sda4=sda4+Minus_bytes+sda3
                                                 
