@@ -405,10 +405,10 @@ class compression:
                                             
 
 
-                                            ei1=ei1+14
-                                            ei2=ei2+14
-                                            eie1=ei1+14
-                                            eie2=ei2+14
+                                            ei1=ei1+16
+                                            ei2=ei2+16
+                                            eie1=ei1+16
+                                            eie2=ei2+16
 
                                         
                                         
@@ -638,7 +638,6 @@ class compression:
                                                 sda4=sda4+Minus_bytes+mi3
 
                                             else:
-                                                
                                                 
                                                 sda4=sda4+Minus_bytes+sda3
                                                 
