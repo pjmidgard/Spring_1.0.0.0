@@ -307,12 +307,12 @@ class compression:
                                             
                                             
                                             el=eo
-                                            eo=eo+2523092
+                                            eo=eo+2523105
                                             takebitsize=sda[el:eo]
                                             xssd=len(takebitsize)
-                                            el=eo-2523092
-                                            eo=eo-2523092
-                                            if xssd<=2523092:
+                                            el=eo-2523105
+                                            eo=eo-2523105
+                                            if xssd<=2523104:
                                                 wer=wer+takebitsize
                                                    
                                                 n = int(wer, 2)
@@ -386,8 +386,8 @@ class compression:
                                             ddr=len(wers)
                                             
                                             sw=0
-                                            el1=2523092
-                                            eo1=2523092
+                                            el1=2523108
+                                            eo1=2523108
                                            
                                             while sw<180222:
                                                     
@@ -562,9 +562,9 @@ class compression:
                         with open(name, "rb") as binary_file:
                             data = binary_file.read()
                             lenf1=len(data)
-                            #if lenf1<400000:
-                                #print("This file is too small");
-                                #raise SystemExit
+                            if lenf1<400000:
+                                print("This file is too small");
+                                raise SystemExit
                             s=str(data)
                             lenf=len(data)
                             lenf7=len(data)
@@ -777,10 +777,14 @@ class compression:
                             return print(x3)
 
     def cryptograpy_compression2(self):
-                a, f, g, h, a1 = input("Enter a the deep 5 numbers: ").split()
+                a, b, c, d, e, f, g, h, a1 = input("Enter a the deep nine numbers: ").split()
                 
                 a=int(a)
                 a1=int(a1)
+                b=int(b)
+                c=int(c)
+                d=int(d)
+                e=int(e)
                 f=int(f)
                 g=int(g)
                 h=int(h)
@@ -1033,20 +1037,20 @@ class compression:
                                     lenf4=(lenf7*8)+8
                                   
                                     u=0
-                                    code=lenf4-1
+                                    code=lenf4-a
                                    
                                     for u in range(30):
 
                                         
                                        
-                                        code=code-1
+                                        code=code-b
                                         if u==f:
-                                            code=code-1
+                                            code=code-c
                                         if u==g:
-                                            code=code+1
+                                            code=code+d
 
                                         if u==h:
-                                            code=code+1
+                                            code=code+e
                                         Bytes_row1=Bytes_row1+2**code
                                    
                                     	
@@ -1157,14 +1161,14 @@ class compression:
 
                                         
                                        
-                                        code=code-1
+                                        code=code-b
                                         if u==f:
-                                            code=code-1
+                                            code=code-c
                                         if u==g:
-                                            code=code+1
+                                            code=code+d
 
                                         if u==h:
-                                            code=code+1
+                                            code=code+e
                                         Bytes_row1=Bytes_row1-2**code
                                    
                                     
