@@ -349,11 +349,6 @@ class compression:
                                             code=16-0
                                             T=5
 
-                                            ei1=ei1+13
-                                            ei2=ei2+13
-
-                                            eie1=ei1+13
-                                            eie2=ei2+13
 
                                         if sda3[0:2]=="01":
 
@@ -369,10 +364,6 @@ class compression:
                                             code=16-1
                                             T=5
 
-                                            ei1=ei1+13
-                                            ei2=ei2+13
-                                            eie1=ei1+13
-                                            eie2=ei2+13
 
                                         if sda3[0:2]=="10":
 
@@ -388,11 +379,7 @@ class compression:
                                             code=16-2
                                             T=4
 
-                                            ei1=ei1+13
-                                            ei2=ei2+13
-
-                                            eie1=ei1+13
-                                            eie2=ei2+13
+                                          
 
                                         lenf=len(sda5)
 
@@ -406,6 +393,8 @@ class compression:
                                             
                                             sda7=sda2[ei1:ei1+16]
                                             
+                                              
+                                             
                                             
 
 
@@ -413,7 +402,7 @@ class compression:
 
                                         
                                         
-                                        elif sda3[0:2]!="11":
+                                        if sda3[0:2]!="11":
                                             
                                             u=0
                                             for u in range(10):
@@ -446,15 +435,25 @@ class compression:
                                             Colaider3=szx+Colaider3
                                                                                        
                                             sda6=sda6+Colaider3
+                                            
+                                            
+                                            ei1=ei1+13
+                                            ei2=ei2+13
+
+                                            eie1=ei1+13
+                                            eie2=ei2+13
                                         else:
                                          
                                             
                                             sda6=sda6+sda7
-                                            
+                                             
                                             ei1=ei1+16
                                             ei2=ei2+16
                                             eie1=ei1+16
                                             eie2=ei2+16
+                                            
+                                            
+                                       
 
 
                                             
