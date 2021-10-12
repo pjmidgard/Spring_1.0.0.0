@@ -349,6 +349,11 @@ class compression:
                                             code=16-0
                                             T=5
 
+                                            ei1=ei1+13
+                                            ei2=ei2+13
+
+                                            eie1=ei1+13
+                                            eie2=ei2+13
 
                                         if sda3[0:2]=="01":
 
@@ -364,6 +369,10 @@ class compression:
                                             code=16-1
                                             T=5
 
+                                            ei1=ei1+13
+                                            ei2=ei2+13
+                                            eie1=ei1+13
+                                            eie2=ei2+13
 
                                         if sda3[0:2]=="10":
 
@@ -379,7 +388,11 @@ class compression:
                                             code=16-2
                                             T=4
 
-                                          
+                                            ei1=ei1+13
+                                            ei2=ei2+13
+
+                                            eie1=ei1+13
+                                            eie2=ei2+13
 
                                         lenf=len(sda5)
 
@@ -393,16 +406,17 @@ class compression:
                                             
                                             sda7=sda2[ei1:ei1+16]
                                             
-                                              
-                                             
                                             
 
 
-                                       
+                                            ei1=ei1+14
+                                            ei2=ei2+14
+                                            eie1=ei1+14
+                                            eie2=ei2+14
 
                                         
                                         
-                                        if sda3[0:2]!="11":
+                                        elif sda3[0:2]!="11":
                                             
                                             u=0
                                             for u in range(10):
@@ -435,27 +449,16 @@ class compression:
                                             Colaider3=szx+Colaider3
                                                                                        
                                             sda6=sda6+Colaider3
-                                            
-                                            
-                                            ei1=ei1+13
-                                            ei2=ei2+13
-
-                                            eie1=ei1+13
-                                            eie2=ei2+13
                                         else:
-                                         
+                                            sda7=sda2[ei1:ei1+16]
                                             
                                             sda6=sda6+sda7
-                                             
+
+
                                             ei1=ei1+16
                                             ei2=ei2+16
                                             eie1=ei1+16
                                             eie2=ei2+16
-                                            
-                                            
-                                       
-
-
                                             
 
                                     wer=sda6[0:Size]
@@ -639,7 +642,6 @@ class compression:
                                                 sda4=sda4+Minus_bytes+mi3
 
                                             else:
-                                                Minus_bytes="11"
                                                 
                                                 sda4=sda4+Minus_bytes+sda3
                                                 
@@ -736,4 +738,4 @@ class compression:
 d=compression()
 
 xw=d.cryptograpy_compression2()
-print(xw)		
+print(xw)
