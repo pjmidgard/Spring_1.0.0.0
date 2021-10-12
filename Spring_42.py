@@ -947,14 +947,15 @@ class compression:
                                 
                                     
                                 #########################################################################################################################################################
-                                
+                                if i==1:
+                                	      if lenf5!=8192:
+                                        		raise SystemExit
+                                        
                                 block2=0
                                 if i==2:
                                     
                                     lenf5=len(sda2)
-                                    if lenf5!=8192:
-                                        raise SystemExit
-                                        
+                              
                                         
                                         
                                     block2=0
@@ -1308,7 +1309,7 @@ class compression:
                                               
                                                 
 
-                                            if lenfa1<lenfa2 and lenfa1<lenfa3 and lenfa1==12:
+                                            if lenfa1<lenfa2 and lenfa1<lenfa3 and lenfa1==13:
 
                                                 mi=bin(Bytes_row1)[2:]
                                                 lenfa1=len(mi)
@@ -1320,7 +1321,7 @@ class compression:
                                                 Minus_bytes="00"
                                                 sda4=sda4+Minus_bytes+mi
 
-                                            elif lenfa2<lenfa1 and lenfa2<lenfa3 and lenfa2==12:
+                                            elif lenfa2<lenfa1 and lenfa2<lenfa3 and lenfa2==13:
 
                                                
 
@@ -1334,7 +1335,7 @@ class compression:
                                                 Minus_bytes="01"
                                                 sda4=sda4+Minus_bytes+mi1
 
-                                            elif lenfa3<lenfa2 and lenfa3<lenfa1 and lenfa3==12:
+                                            elif lenfa3<lenfa2 and lenfa3<lenfa1 and lenfa3==13:
                                                
 
                                                 mi3=bin(Bytes_row4)[2:]
