@@ -75,6 +75,8 @@ class compression:
                 
         
                 self.name = "Written: Jurijus pacalovas Date: 29/09/2021 18:06"
+
+                deep= int(input("please, enter deep of the file? "))
                 
                 if namez=="c" or namez=="e":
                     if namez=="c":
@@ -331,6 +333,7 @@ class compression:
                                   
                                     
                                     u2=1
+                                    lenf5=deep
                                     while ei2<=lenf5*4+16:
 
                                         sda3=sda2[eie1:eie2]
@@ -398,10 +401,6 @@ class compression:
 
                                         if sda3[0:2]=="11":
 
-                                            ei1=ei1+2
-                                            ei2=ei2+2
-                                            eie1=ei1+2
-                                            eie2=ei2+2
                                             
                                             
                                             sda7=sda2[ei1:ei1+16]
@@ -409,10 +408,10 @@ class compression:
                                             
 
 
-                                            ei1=ei1+16
-                                            ei2=ei2+16
-                                            eie1=ei1+16
-                                            eie2=ei2+16
+                                            ei1=ei1+14
+                                            ei2=ei2+14
+                                            eie1=ei1+14
+                                            eie2=ei2+14
 
                                         
                                         
@@ -461,7 +460,7 @@ class compression:
                                             eie2=ei2+16
                                             
 
-                                    wer=sda6[0:Size]
+                                    wer=sda6[0:deep]+sda2[deep:Size]
 
                                     n = int(wer, 2)
                                     qqwslenf=len(wer)
@@ -527,6 +526,7 @@ class compression:
 
                                     #Compression
                                     u2=1
+                                    lenf5=deep
                                     while ei2<=lenf5*4+16:
 
                                         sda3=sda2[ei1:ei2]
@@ -642,8 +642,8 @@ class compression:
                                                 sda4=sda4+Minus_bytes+mi3
 
                                             else:
-                                                
-                                                sda4=sda4+Minus_bytes+sda3
+                                                 raise SystemExit
+
                                                 
                                                 
                                             
@@ -662,7 +662,7 @@ class compression:
                                     Spin=1
                                 
                                          
-                                    sda6=sda4
+                                    sda6=sda4[0:deep]+sda2[deep:]
 
                                     Spin=0
                                          
