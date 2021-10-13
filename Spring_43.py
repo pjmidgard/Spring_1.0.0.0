@@ -75,8 +75,6 @@ class compression:
                 
         
                 self.name = "Written: Jurijus pacalovas Date: 29/09/2021 18:06"
-
-                deep= int(input("please, enter deep of the file? "))
                 
                 if namez=="c" or namez=="e":
                     if namez=="c":
@@ -333,7 +331,6 @@ class compression:
                                   
                                     
                                     u2=1
-                                    lenf5=deep
                                     while ei2<=lenf5*4+16:
 
                                         sda3=sda2[eie1:eie2]
@@ -460,7 +457,7 @@ class compression:
                                             eie2=ei2+16
                                             
 
-                                    wer=sda6[0:deep]+sda2[deep:Size]
+                                    wer=sda6[0:Size]
 
                                     n = int(wer, 2)
                                     qqwslenf=len(wer)
@@ -526,7 +523,6 @@ class compression:
 
                                     #Compression
                                     u2=1
-                                    lenf5=deep
                                     while ei2<=lenf5*4+16:
 
                                         sda3=sda2[ei1:ei2]
@@ -642,8 +638,9 @@ class compression:
                                                 sda4=sda4+Minus_bytes+mi3
 
                                             else:
-                                                 raise SystemExit
-
+                                                
+                                                
+                                                sda4=sda4+Minus_bytes+sda3
                                                 
                                                 
                                             
@@ -662,7 +659,7 @@ class compression:
                                     Spin=1
                                 
                                          
-                                    sda6=sda4[0:deep]+sda2[deep:]
+                                    sda6=sda4
 
                                     Spin=0
                                          
