@@ -103,6 +103,11 @@ class compression:
                     nameas=name
                     nac=len(nameas)
 
+
+                    if nameas[nac-4:nac]!=".txt":
+                             print("Program close because this is file is not .bin")
+                             raise SystemExit
+
                     if i==2:
                         if nameas[nac-4:nac]!=".bin":
                              print("Program close because this is file is not .bin")
