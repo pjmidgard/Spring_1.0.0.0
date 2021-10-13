@@ -103,11 +103,6 @@ class compression:
                     nameas=name
                     nac=len(nameas)
 
-
-                    if nameas[nac-4:nac]!=".txt":
-                             print("Program close because this is file is not .bin")
-                             raise SystemExit
-
                     if i==2:
                         if nameas[nac-4:nac]!=".bin":
                              print("Program close because this is file is not .bin")
@@ -403,6 +398,10 @@ class compression:
 
                                         if sda3[0:2]=="11":
 
+                                            ei1=ei1+2
+                                            ei2=ei2+2
+                                            eie1=ei1+2
+                                            eie2=ei2+2
                                             
                                             
                                             sda7=sda2[ei1:ei1+16]
@@ -410,10 +409,10 @@ class compression:
                                             
 
 
-                                            ei1=ei1+14
-                                            ei2=ei2+14
-                                            eie1=ei1+14
-                                            eie2=ei2+14
+                                            ei1=ei1+16
+                                            ei2=ei2+16
+                                            eie1=ei1+16
+                                            eie2=ei2+16
 
                                         
                                         
@@ -643,7 +642,6 @@ class compression:
                                                 sda4=sda4+Minus_bytes+mi3
 
                                             else:
-                                                
                                                 
                                                 sda4=sda4+Minus_bytes+sda3
                                                 
