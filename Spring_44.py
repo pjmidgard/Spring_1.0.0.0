@@ -1081,7 +1081,7 @@ class compression:
                                     qqwslenf="%0"+qqwslenf+"x"
                                     jl=binascii.unhexlify(qqwslenf % n)
                                     sssssw=len(jl)
-             
+                                               
                                     Circle_times=Circle_times+1
                                     szxzzza=""
                                     szxzs=""
@@ -1166,9 +1166,6 @@ class compression:
                                         lenf=len(Colaider3)
                                         #print(lenf)
                                         
-
-                                       
-
                                         if lenf<=252 and Bytes_row1>0 and Bytes_row2==Bytes_row3:
                                                 sda7=""
                                                 szx=""
@@ -1191,15 +1188,9 @@ class compression:
 
                                             sda4=sda4+"0"+sda9
 
-
-
-                                        
                                     #print(ei)
                                     sda6=sda4
                                     
-                                        
-                                    #if  -1 count + round add then this to this number
-                                   
                                     #####################################################################################################################################################
                                                   
                                     block2=0
@@ -1243,7 +1234,7 @@ class compression:
                                         qqwslenf="%0"+qqwslenf+"x"
                                         jl=binascii.unhexlify(qqwslenf % n)
                                         sssssw=len(jl)
-             
+                                                        
                                         Circle_times=Circle_times+1
                                         szxzzza=""
                                         szxzs=""
