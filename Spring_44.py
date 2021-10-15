@@ -1,5 +1,6 @@
 from time import time
 cvf=0
+Portal=2
 import os
 import binascii
 import math
@@ -1028,8 +1029,8 @@ class compression:
                                             ei=ei+1
 
                                             if sda8=="1":
-                                                sda5=sda3[ei:ei+252]
-                                                ei=ei+252
+                                                sda5=sda3[ei:ei+230]
+                                                ei=ei+230
 
                                                 
                                                 Bytes_row4=int(sda5, 2)
@@ -1040,10 +1041,10 @@ class compression:
                                                 u=0
                                                 code=256
 
-                                                for u in range(256):
+                                                for u in range(128):
                                                    
                                                     
-                                                    code=code-2
+                                                    code=code-1
                                                         
                                                     Bytes_row4=Bytes_row4+2**code
 
@@ -1081,15 +1082,14 @@ class compression:
                                     qqwslenf="%0"+qqwslenf+"x"
                                     jl=binascii.unhexlify(qqwslenf % n)
                                     sssssw=len(jl)
-                                               
+
+                                                        
                                     Circle_times=Circle_times+1
                                     szxzzza=""
                                     szxzs=""
                                     sda2=sda6
                                                         
                                     Circle_times2=Circle_times2+1
-
-                                    
 
                                     if Circle_times2==1:                   
                                             
@@ -1151,10 +1151,10 @@ class compression:
                                         u=0
                                         code=256
 
-                                        for u in range(256):
+                                        for u in range(128):
                                            
                                             
-                                            code=code-2
+                                            code=code-1
                                                 
                                             Bytes_row3=Bytes_row3+2**code
 
@@ -1166,31 +1166,37 @@ class compression:
                                         lenf=len(Colaider3)
                                         #print(lenf)
                                         
-                                        if lenf<=252 and Bytes_row1>0 and Bytes_row2==Bytes_row3:
+
+                                       
+
+                                        if lenf<=230 and Bytes_row1>0 and Bytes_row2==Bytes_row3:
                                                 sda7=""
                                                 szx=""
                                                 lenf=len(Colaider3)
-                                                xc=252-lenf
+                                                xc=230-lenf
                                                 z=0
                                                 if xc!=0:
-                                                     if xc!=252:
-                                                        while z<xc:
-                                                             szx="0"+szx
-                                                             z=z+1                                         	     														
+                                                    if xc!=230:
+                                                            while z<xc:
+                                                                szx="0"+szx
+                                                                z=z+1                                         	     														
 
                                              
                                              
-                                        if lenf<=252 and Bytes_row1>0 and Bytes_row2==Bytes_row3:   
+                                        if lenf<=230 and Bytes_row1>0 and Bytes_row2==Bytes_row3:   
                                         
-                                        	sda4=sda4+"1"+szx+Colaider3
-                                                                             
+                            		    sda4=sda4+"1"+szx+Colaider3
+                                                                        
                                         else:
 
                                             sda4=sda4+"0"+sda9
 
+
+
+                                        
                                     #print(ei)
                                     sda6=sda4
-                                    
+                                      
                                     #####################################################################################################################################################
                                                   
                                     block2=0
@@ -1234,6 +1240,7 @@ class compression:
                                         qqwslenf="%0"+qqwslenf+"x"
                                         jl=binascii.unhexlify(qqwslenf % n)
                                         sssssw=len(jl)
+
                                                         
                                         Circle_times=Circle_times+1
                                         szxzzza=""
@@ -1246,7 +1253,6 @@ class compression:
                                         if Circle_times2==1:                   
                                             
                                             f2.write(jl)
-                                            
                                             x2 = time()
                                             x3=x2-x
                                             return print(x3)
