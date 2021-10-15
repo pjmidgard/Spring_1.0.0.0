@@ -1025,12 +1025,12 @@ class compression:
 
                                         if sda7=="1":
                                     
-                                            sda8=sda3[ei:ei+3]
-                                            ei=ei+3
+                                            sda8=sda3[ei:ei+1]
+                                            ei=ei+1
 
-                                            if sda8=="100":
-                                                sda5=sda3[ei:ei+9]
-                                                ei=ei+9
+                                            if sda8=="1":
+                                                sda5=sda3[ei:ei+14]
+                                                ei=ei+14
 
                                                 
                                                 Bytes_row4=int(sda5, 2)
@@ -1067,118 +1067,6 @@ class compression:
                                         
                                                 sda4=sda4+szx+szx1
 
-                                            if sda8=="101":
-                                                sda5=sda3[ei:ei+10]
-                                                ei=ei+10
-
-                                                Bytes_row4=int(sda5, 2)
-                                                #print(Bytes_row4)
-
-                                                count=0
-
-                                                u=0
-                                                code=16
-
-                                                for u in range(8):
-                                                   
-                                                    
-                                                    code=code-2
-                                                        
-                                                    Bytes_row4=Bytes_row4+2**code
-
-
-                                                szx=""
-                                                szx1=""
-                                              
-                                                szx1=bin(Bytes_row4)[2:]
-                                                lenf=len(szx1)
-
-                                                #print(lenf)
-                                                
-                                                #print(lenf)
-                                                xc=16-lenf%16
-                                                z=0
-                                                if xc!=0:
-                                                     if xc!=16:
-                                                           while z<xc:
-                                                                szx="0"+szx
-                                                                z=z+1
-                                                sda4=sda4+szx+szx1
-
-                                            if sda8=="110":
-                                                sda5=sda3[ei:ei+11]
-                                                ei=ei+11
-
-                                                Bytes_row4=int(sda5, 2)
-                                                #print(Bytes_row4)
-
-                                                count=0
-
-                                                u=0
-                                                code=16
-
-                                                for u in range(8):
-                                                   
-                                                    
-                                                    code=code-2
-                                                        
-                                                    Bytes_row4=Bytes_row4+2**code
-
-
-                                                szx=""
-                                                szx1=""
-                                              
-                                                szx1=bin(Bytes_row4)[2:]
-                                                lenf=len(szx1)
-                                                #print(lenf)
-                                                
-                                                #print(lenf)
-                                                xc=16-lenf%16
-                                                z=0
-                                                if xc!=0:
-                                                     if xc!=16:
-                                                           while z<xc:
-                                                                szx="0"+szx
-                                                                z=z+1
-                                                sda4=sda4+szx+szx1
-                                                
-                                            if sda8=="111":
-                                                sda5=sda3[ei:ei+12]
-                                                ei=ei+12
-
-                                                Bytes_row4=int(sda5, 2)
-                                                #print(Bytes_row4)
-
-                                                count=0
-
-                                                u=0
-                                                code=16
-
-                                                for u in range(8):
-                                                   
-                                                    
-                                                    code=code-2
-                                                        
-                                                    Bytes_row4=Bytes_row4+2**code
-
-
-                                                szx=""
-                                                szx1=""
-                                              
-                                                szx1=bin(Bytes_row4)[2:]
-                                                lenf=len(szx1)
-                                                #print(lenf)
-                                                
-                                                #print(lenf)
-                                                xc=16-lenf%16
-                                                z=0
-                                                if xc!=0:
-                                                     if xc!=16:
-                                                           while z<xc:
-                                                                szx="0"+szx
-                                                                z=z+1
-                                                
-                                                sda4=sda4+szx+szx1
 
 
 
@@ -1281,38 +1169,26 @@ class compression:
 
                                        
 
-                                        if lenf<=9 and Bytes_row1>0 and Bytes_row2==Bytes_row3:
+                                        if lenf<=14 and Bytes_row1>0 and Bytes_row2==Bytes_row3:
                                                 sda7=""
+                                                szx=""
                                                 lenf=len(Colaider3)
-                                                xc=9-lenf%9
+                                                xc=14-lenf
                                                 z=0
                                                 if xc!=0:
-                                                     	if xc!=9:
+                                                     	if xc!=14:
                                                            	while z<xc:
                                                                 	szx="0"+szx
                                                                 	z=z+1                                         	     														
 
                                              
                                              
-                                        if lenf<=9 and Bytes_row1>0 and Bytes_row2==Bytes_row3:   
+                                        if lenf<=14 and Bytes_row1>0 and Bytes_row2==Bytes_row3:   
                                         
-                                        																								sda4=sda4+"100"+szx+Colaider3
+                                        																								sda4=sda4+"1"+szx+Colaider3
                                                                              
 
-                                        elif lenf==10 and Bytes_row1>0 and Bytes_row2==Bytes_row3:
-                                    
-                                            sda4=sda4+"101"+Colaider3
-                                            
-                                        elif lenf==11 and Bytes_row1>0 and Bytes_row2==Bytes_row3:
-                                           
-                                                           
-                                            sda4=sda4+"110"+Colaider3
-
-                                        elif lenf==12 and Bytes_row1>0 and Bytes_row2==Bytes_row3:
-
-                                            
-                                                           
-                                            sda4=sda4+"111"+Colaider3
+            
                                         else:
 
                                             sda4=sda4+"0"+sda9
