@@ -1176,10 +1176,10 @@ class compression:
                                                 xc=230-lenf
                                                 z=0
                                                 if xc!=0:
-                                                     	if xc!=230:
-                                                           	while z<xc:
-                                                                	szx="0"+szx
-                                                                	z=z+1                                         	     														
+                                                    if xc!=230:
+                                                            while z<xc:
+                                                                szx="0"+szx
+                                                                z=z+1                                         	     														
 
                                              
                                              
