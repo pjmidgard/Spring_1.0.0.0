@@ -1183,7 +1183,7 @@ class compression:
 
                                              
                                              
-                                        if lenf<=253 and Bytes_row1>0 and Bytes_row2==Bytes_row3:   
+                                        if lenf<=252 and Bytes_row1>0 and Bytes_row2==Bytes_row3:   
                                         
                                         																								sda4=sda4+"1"+szx+Colaider3
                                                                              
