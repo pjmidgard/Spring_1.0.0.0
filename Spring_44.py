@@ -1281,10 +1281,23 @@ class compression:
 
                                        
 
-                                        if lenf==9 and Bytes_row1>0 and Bytes_row2==Bytes_row3:
-                                            
+                                        if lenf<=9 and Bytes_row1>0 and Bytes_row2==Bytes_row3:
+                                                sda7=""
+                                                lenf=len(Colaider3)
+                                                xc=9-lenf%9
+                                                z=0
+                                                if xc!=0:
+                                                     	if xc!=9:
+                                                           	while z<xc:
+                                                                	szx="0"+szx
+                                                                	z=z+1                                         	     														
+
+                                             
+                                             
+                                        if lenf<=9 and Bytes_row1>0 and Bytes_row2==Bytes_row3:   
                                         
-                                            sda4=sda4+"100"+Colaider3 
+                                        																								sda4=sda4+"100"+szx+Colaider3
+                                                                             
 
                                         elif lenf==10 and Bytes_row1>0 and Bytes_row2==Bytes_row3:
                                     
