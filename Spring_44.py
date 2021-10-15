@@ -1082,13 +1082,17 @@ class compression:
                                     jl=binascii.unhexlify(qqwslenf % n)
                                     sssssw=len(jl)
 
-                                                        
+                                    import brotlicffi
+                                    jl = brotlicffi.decompress(jl)
+                                               
                                     Circle_times=Circle_times+1
                                     szxzzza=""
                                     szxzs=""
                                     sda2=sda6
                                                         
                                     Circle_times2=Circle_times2+1
+
+                                    
 
                                     if Circle_times2==1:                   
                                             
@@ -1254,6 +1258,11 @@ class compression:
                                         jl=binascii.unhexlify(qqwslenf % n)
                                         sssssw=len(jl)
 
+
+                                        import brotlicffi
+                                        jl = brotlicffi.compress(jl)
+                                        
+
                                                         
                                         Circle_times=Circle_times+1
                                         szxzzza=""
@@ -1266,6 +1275,7 @@ class compression:
                                         if Circle_times2==1:                   
                                             
                                             f2.write(jl)
+                                            
                                             x2 = time()
                                             x3=x2-x
                                             return print(x3)
