@@ -1029,8 +1029,8 @@ class compression:
                                             ei=ei+1
 
                                             if sda8=="1":
-                                                sda5=sda3[ei:ei+255]
-                                                ei=ei+255
+                                                sda5=sda3[ei:ei+254]
+                                                ei=ei+254
 
                                                 
                                                 Bytes_row4=int(sda5, 2)
@@ -1169,21 +1169,21 @@ class compression:
 
                                        
 
-                                        if lenf<=255 and Bytes_row1>0 and Bytes_row2==Bytes_row3:
+                                        if lenf<=254 and Bytes_row1>0 and Bytes_row2==Bytes_row3:
                                                 sda7=""
                                                 szx=""
                                                 lenf=len(Colaider3)
-                                                xc=255-lenf
+                                                xc=254-lenf
                                                 z=0
                                                 if xc!=0:
-                                                     	if xc!=255:
+                                                     	if xc!=254:
                                                            	while z<xc:
                                                                 	szx="0"+szx
                                                                 	z=z+1                                         	     														
 
                                              
                                              
-                                        if lenf<=255 and Bytes_row1>0 and Bytes_row2==Bytes_row3:   
+                                        if lenf<=254 and Bytes_row1>0 and Bytes_row2==Bytes_row3:   
                                         
                                         																								sda4=sda4+"1"+szx+Colaider3
                                                                              
