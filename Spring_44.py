@@ -1185,7 +1185,7 @@ class compression:
                                              
                                         if lenf<=230 and Bytes_row1>0 and Bytes_row2==Bytes_row3:   
                                         
-                            		    sda4=sda4+"1"+szx+Colaider3
+                                            sda4=sda4+"1"+szx+Colaider3
                                                                         
                                         else:
 
