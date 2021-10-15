@@ -1081,10 +1081,7 @@ class compression:
                                     qqwslenf="%0"+qqwslenf+"x"
                                     jl=binascii.unhexlify(qqwslenf % n)
                                     sssssw=len(jl)
-
-                                    import brotlicffi
-                                    jl = brotlicffi.decompress(jl)
-                                               
+             
                                     Circle_times=Circle_times+1
                                     szxzzza=""
                                     szxzs=""
@@ -1202,18 +1199,7 @@ class compression:
                                     
                                         
                                     #if  -1 count + round add then this to this number
-                                    
-                                    
-                                         
-                                        
-                                         
-                                    #The colaider count information that got
-                                    #n2 Long of the bytes that we got.
-
-
-                                      
-                                         
-                                    
+                                   
                                     #####################################################################################################################################################
                                                   
                                     block2=0
@@ -1257,13 +1243,7 @@ class compression:
                                         qqwslenf="%0"+qqwslenf+"x"
                                         jl=binascii.unhexlify(qqwslenf % n)
                                         sssssw=len(jl)
-
-
-                                        import brotlicffi
-                                        jl = brotlicffi.compress(jl)
-                                        
-
-                                                        
+             
                                         Circle_times=Circle_times+1
                                         szxzzza=""
                                         szxzs=""
