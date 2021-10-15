@@ -1029,8 +1029,8 @@ class compression:
                                             ei=ei+1
 
                                             if sda8=="1":
-                                                sda5=sda3[ei:ei+252]
-                                                ei=ei+252
+                                                sda5=sda3[ei:ei+230]
+                                                ei=ei+230
 
                                                 
                                                 Bytes_row4=int(sda5, 2)
@@ -1041,7 +1041,7 @@ class compression:
                                                 u=0
                                                 code=256
 
-                                                for u in range(256):
+                                                for u in range(64):
                                                    
                                                     
                                                     code=code-2
@@ -1151,10 +1151,10 @@ class compression:
                                         u=0
                                         code=256
 
-                                        for u in range(256):
+                                        for u in range(128):
                                            
                                             
-                                            code=code-2
+                                            code=code-1
                                                 
                                             Bytes_row3=Bytes_row3+2**code
 
@@ -1169,21 +1169,21 @@ class compression:
 
                                        
 
-                                        if lenf<=252 and Bytes_row1>0 and Bytes_row2==Bytes_row3:
+                                        if lenf<=230 and Bytes_row1>0 and Bytes_row2==Bytes_row3:
                                                 sda7=""
                                                 szx=""
                                                 lenf=len(Colaider3)
-                                                xc=252-lenf
+                                                xc=230-lenf
                                                 z=0
                                                 if xc!=0:
-                                                     	if xc!=252:
+                                                     	if xc!=230:
                                                            	while z<xc:
                                                                 	szx="0"+szx
                                                                 	z=z+1                                         	     														
 
                                              
                                              
-                                        if lenf<=252 and Bytes_row1>0 and Bytes_row2==Bytes_row3:   
+                                        if lenf<=230 and Bytes_row1>0 and Bytes_row2==Bytes_row3:   
                                         
                                         																								sda4=sda4+"1"+szx+Colaider3
                                                                              
