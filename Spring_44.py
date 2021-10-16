@@ -1029,8 +1029,8 @@ class compression:
                                             ei=ei+1
 
                                             if sda8=="1":
-                                                sda5=sda3[ei:ei+230]
-                                                ei=ei+230
+                                                sda5=sda3[ei:ei+254]
+                                                ei=ei+254
 
                                                 
                                                 Bytes_row4=int(sda5, 2)
@@ -1041,12 +1041,6 @@ class compression:
                                                 u=0
                                                 code=256
 
-                                                for u in range(128):
-                                                   
-                                                    
-                                                    code=code-1
-                                                        
-                                                    Bytes_row4=Bytes_row4+2**code
 
 
                                                 szx=""
@@ -1138,25 +1132,7 @@ class compression:
                                         u=0
                                         code=256
 
-                                        Bytes_row2=Bytes_row1
-                                        for u in range(128):
-                                           
-                                            
-                                            code=code-1
-                                                
-                                            Bytes_row1=Bytes_row1-2**code
-
-                                        Bytes_row3=Bytes_row1
-                                        
-                                        u=0
-                                        code=256
-
-                                        for u in range(128):
-                                           
-                                            
-                                            code=code-1
-                                                
-                                            Bytes_row3=Bytes_row3+2**code
+          
 
 
                                         szx=""
@@ -1169,21 +1145,21 @@ class compression:
 
                                        
 
-                                        if lenf<=230 and Bytes_row1>0 and Bytes_row2==Bytes_row3:
+                                        if lenf<=254:
                                                 sda7=""
                                                 szx=""
                                                 lenf=len(Colaider3)
-                                                xc=230-lenf
+                                                xc=254-lenf
                                                 z=0
                                                 if xc!=0:
-                                                    if xc!=230:
+                                                    if xc!=254:
                                                             while z<xc:
                                                                 szx="0"+szx
                                                                 z=z+1                                         	     														
 
                                              
                                              
-                                        if lenf<=230 and Bytes_row1>0 and Bytes_row2==Bytes_row3:   
+                                        if lenf<=254:   
                                         
                                             sda4=sda4+"1"+szx+Colaider3
                                                                         
