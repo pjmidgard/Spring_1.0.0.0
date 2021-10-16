@@ -557,12 +557,12 @@ class compression:
                                             
                                             
                                             el=eo
-                                            eo=eo+2523108
+                                            eo=eo+2523109
                                             takebitsize=sda[el:eo]
                                             xssd=len(takebitsize)
-                                            el=eo-2523108
-                                            eo=eo-2523108
-                                            if xssd<=2523107:
+                                            el=eo-2523109
+                                            eo=eo-2523109
+                                            if xssd<=2523108:
                                                 wer=wer+takebitsize
                                                    
                                                 n = int(wer, 2)
