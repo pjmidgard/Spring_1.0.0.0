@@ -627,10 +627,10 @@ class compression:
                                         if sda7=="0":
                                             ei=ei+1
 
-                                            sda9=sda3[ei:ei+8388608]
+                                            sda9=sda3[ei:ei+8192]
                                         
                                             sda4=sda4+sda9
-                                            ei=ei+8388608
+                                            ei=ei+8192
 
                                         if sda7=="1":
                                     
@@ -638,8 +638,8 @@ class compression:
                                             ei=ei+1
 
                                             if sda8=="1":
-                                                sda5=sda3[ei:ei+8388606]
-                                                ei=ei+8388606
+                                                sda5=sda3[ei:ei+8191]
+                                                ei=ei+8191
 
                                                 
                                                 Bytes_row4=int(sda5, 2)
@@ -660,10 +660,10 @@ class compression:
                                                 #print(lenf)
                                                 
                                                 #print(lenf)
-                                                xc=8388608-lenf%8388608
+                                                xc=8192-lenf%8192
                                                 z=0
                                                 if xc!=0:
-                                                     if xc!=8388608:
+                                                     if xc!=8192:
                                                            while z<xc:
                                                                 szx="0"+szx
                                                                 z=z+1
@@ -708,7 +708,7 @@ class compression:
                                     Spin=0
                                     sda3=sda2
                                     lenf6=len(sda3)
-                                    if lenf6<8388608:
+                                    if lenf6<8192:
                                     	raise SystemExit
                                     ei4=0
                                     ei5=20
@@ -733,9 +733,9 @@ class compression:
 
                                     while ei<lenf6:
 
-                                        sda9=sda2[ei:ei+8388608]
+                                        sda9=sda2[ei:ei+8192]
 
-                                        ei=ei+8388608
+                                        ei=ei+8192
 
                                         Bytes_row1=int(sda9, 2)
 
@@ -756,23 +756,23 @@ class compression:
 
                                        
 
-                                        if lenf<=8388606:
+                                        if lenf<=8191 and Colaider3[0:1]=="1":
                                                 sda7=""
                                                 szx=""
                                                 lenf=len(Colaider3)
-                                                xc=8388606-lenf
+                                                xc=8190-lenf
                                                 z=0
                                                 if xc!=0:
-                                                    if xc!=8388606:
+                                                    if xc!=8190:
                                                             while z<xc:
                                                                 szx="0"+szx
                                                                 z=z+1                                         	     														
 
                                              
                                              
-                                        if lenf<=8388606:   
+                                        if lenf<=8191:   
                                         
-                                            sda4=sda4+"1"+szx+Colaider3
+                                            sda4=sda4+szx+Colaider3
                                                                         
                                         else:
 
