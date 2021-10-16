@@ -557,12 +557,12 @@ class compression:
                                             
                                             
                                             el=eo
-                                            eo=eo+2523105
+                                            eo=eo+2523108
                                             takebitsize=sda[el:eo]
                                             xssd=len(takebitsize)
-                                            el=eo-2523105
-                                            eo=eo-2523105
-                                            if xssd<=2523104:
+                                            el=eo-2523108
+                                            eo=eo-2523108
+                                            if xssd<=2523107:
                                                 wer=wer+takebitsize
                                                    
                                                 n = int(wer, 2)
@@ -811,9 +811,9 @@ class compression:
                         with open(name, "rb") as binary_file:
                             data = binary_file.read()
                             lenf1=len(data)
-                            if lenf1<400000:
-                                print("This file is too small");
-                                raise SystemExit
+                            #if lenf1<400000:
+                               # print("This file is too small");
+                               # raise SystemExit
                             s=str(data)
                             lenf=len(data)
                         sda=bin(int(binascii.hexlify(data),16))[2:]
