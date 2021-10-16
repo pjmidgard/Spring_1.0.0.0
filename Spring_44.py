@@ -70,10 +70,10 @@ class compression:
     def cryptograpy_compression(self):
               
                 
-                if namez=="ul" or namez=="cl":
-                    if namez=="ul":
+                if namez=="ul2" or namez=="cl2":
+                    if namez=="ul2":
                         i=1
-                    if namez=="cl":
+                    if namez=="cl2":
                         i=2
                         
                     corridors=0
@@ -90,11 +90,11 @@ class compression:
                     nac=len(nameas)
 
                     if i==2:
-                        if nameas[nac-4:nac]!=".bin":
+                        if nameas[nac-12:nac]!=".bin.bin.bin":
                              print("Program close because this is file is not .bin")
                              raise SystemExit
                         
-                        nameas=name[:nac-4]
+                        nameas=name[:nac-12]
                         nac=len(nameas)
                     
                     
@@ -113,7 +113,7 @@ class compression:
                       
                     if i==1:
                        
-                        nameas=name+".bin"
+                        nameas=name+".bin.bin.bin"
                     
                     nac=len(nameas)
                     
@@ -151,14 +151,7 @@ class compression:
                        # Read the whole file at once
                         data = binary_file.read()
 
-                        if i==2:
-
-                        
-                            import brotlicffi
-                            data=brotlicffi.decompress(data)
-                
-
-                        
+                      
                         if i==1:
                             if Portal==9 and data[0:3]!=b'\xff\xd8\xff':
                                     print("Program close because this is file incorrect")
@@ -310,10 +303,7 @@ class compression:
                                     if assxw==200:
                                         assx=10
                                         if assx==10:
-                                                if i==1:
-                                                    import brotlicffi
-                                                    jl=brotlicffi.compress(jl)
-
+                                            
                                                 if i==2:
                                                     if Portal==7:
                                                         jl= b'\x89\x50\x4e\x47'+jl
