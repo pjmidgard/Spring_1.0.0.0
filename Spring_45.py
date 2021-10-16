@@ -626,10 +626,10 @@ class compression:
                                         if sda7=="0":
                                             ei=ei+1
 
-                                            sda9=sda3[ei:ei+4]
+                                            sda9=sda3[ei:ei+8192]
                                         
                                             sda4=sda4+sda9
-                                            ei=ei+4
+                                            ei=ei+8192
 
                                         if sda7=="1":
                                     
@@ -637,8 +637,8 @@ class compression:
                                             ei=ei+1
 
                                             if sda8=="1":
-                                                sda5=sda3[ei:ei+2]
-                                                ei=ei+2
+                                                sda5=sda3[ei:ei+8190]
+                                                ei=ei+8190
 
                                                 
                                                 Bytes_row4=int(sda5, 2)
@@ -659,10 +659,10 @@ class compression:
                                                 #print(lenf)
                                                 
                                                 #print(lenf)
-                                                xc=4-lenf%4
+                                                xc=8192-lenf%8192
                                                 z=0
                                                 if xc!=0:
-                                                     if xc!=4:
+                                                     if xc!=8192:
                                                            while z<xc:
                                                                 szx="0"+szx
                                                                 z=z+1
@@ -729,9 +729,9 @@ class compression:
 
                                     while ei<lenf6:
 
-                                        sda9=sda2[ei:ei+4]
+                                        sda9=sda2[ei:ei+8192]
 
-                                        ei=ei+4
+                                        ei=ei+8192
 
                                         Bytes_row1=int(sda9, 2)
 
@@ -752,21 +752,21 @@ class compression:
 
                                        
 
-                                        if lenf<=2:
+                                        if lenf<=8190:
                                                 sda7=""
                                                 szx=""
                                                 lenf=len(Colaider3)
-                                                xc=2-lenf
+                                                xc=8190-lenf
                                                 z=0
                                                 if xc!=0:
-                                                    if xc!=2:
+                                                    if xc!=8190:
                                                             while z<xc:
                                                                 szx="0"+szx
                                                                 z=z+1                                         	     														
 
                                              
                                              
-                                        if lenf<=2:   
+                                        if lenf<=8190:   
                                         
                                             sda4=sda4+"1"+szx+Colaider3
                                                                         
