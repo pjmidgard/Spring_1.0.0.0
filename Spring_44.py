@@ -67,14 +67,13 @@ namez = input("c,c2, ul2 or for compress cl for extract for u2,e, cl2? ")
 
 #@Author Jurijus pacalovas
 class compression:
-	def cryptograpy_compression(self):
+    def cryptograpy_compression(self):
+              
                 
-                self.name = "Written: Jurijus pacalovas Price Protal 5 000 000 Euro cost Date: 16/09/2021 14:23 Deep 14.5 ERA"
-                
-                if namez=="ul2" or namez=="cl2":
-                    if namez=="ul2":
+                if namez=="ul" or namez=="cl":
+                    if namez=="ul":
                         i=1
-                    if namez=="cl2":
+                    if namez=="cl":
                         i=2
                         
                     corridors=0
@@ -91,11 +90,11 @@ class compression:
                     nac=len(nameas)
 
                     if i==2:
-                        if nameas[nac-12:nac]!=".bin.bin.bin":
+                        if nameas[nac-4:nac]!=".bin":
                              print("Program close because this is file is not .bin")
                              raise SystemExit
                         
-                        nameas=name[:nac-12]
+                        nameas=name[:nac-4]
                         nac=len(nameas)
                     
                     
@@ -114,7 +113,7 @@ class compression:
                       
                     if i==1:
                        
-                        nameas=name+".bin.bin.bin"
+                        nameas=name+".bin"
                     
                     nac=len(nameas)
                     
@@ -151,6 +150,13 @@ class compression:
 
                        # Read the whole file at once
                         data = binary_file.read()
+
+                        if i==2:
+
+                        
+                            import brotlicffi
+                            data=brotlicffi.decompress(data)
+                
 
                         
                         if i==1:
@@ -245,56 +251,6 @@ class compression:
                                 
                                 block=block+1
                                 
-                                if assxw>=100:
-                                                
-                                            if e4=="0" and e3>= e3%2:
-                                                sda3=sda3+"1"
-                                                e4="1"
-                                                e4=""
-                                                
-                                               
-                                            if e4=="1" and e3>= e3%2:
-                                                sda3=sda3+"0"
-                                                e4="0"
-                                                e4=""
-                                                 
-                            
-                                
-                                if assxw>=e3%6:
-                                                
-                                            if e4=="0" and e3>= e3%2:
-                                                sda3=sda3+"1"
-                                                e4="1"
-                                                e4=""
-                                                 
-                                if e4=="1":
-                                	sda3=sda3+"0"
-                                	e4="0"
-                                	e4=""
-                                    
-                                elif e4=="0":
-                                    sda3=sda3+"1"
-                                    e4="1"
-                                    e4=""     
-                               
-                                if assxw>=e3%4:
-                                                
-                                            if e4=="1" and e3>= e3%2:
-                                                sda3=sda3+"0"
-                                                e4="0"
-                                                e4=""
-                                                 
-                                if e4=="1":
-                                	sda3=sda3+"0"
-                                	e4="0"
-                                	e4=""
-                                    
-                                elif e4=="0":
-                                    sda3=sda3+"1"
-                                    e4="1"
-                                    e4=""     
-                                
-                                
                                 if assxw>=e3%2:
                                                 
                                             if e4=="0" and e3>= e3%2:
@@ -314,6 +270,7 @@ class compression:
                                
                                 e2=e2+1
                                 e3=e3+1
+
                                 e4=""
                           
                                 if e3==cvf:
@@ -353,7 +310,9 @@ class compression:
                                     if assxw==200:
                                         assx=10
                                         if assx==10:
-                
+                                                if i==1:
+                                                    import brotlicffi
+                                                    jl=brotlicffi.compress(jl)
 
                                                 if i==2:
                                                     if Portal==7:
@@ -368,7 +327,8 @@ class compression:
                                                 x3=x2-x
                                                 return print(x3)
 
-	def Areacu2(self):
+
+    def Areacu2(self):
                     if namez=="u2":
                         x=0
                         x1=0
@@ -741,7 +701,7 @@ class compression:
                                     x3 = x2-x
                                     return print(x3) 
 
-	def Areac2(self):
+    def Areac2(self):
                     if namez=="c2":
                         x=0
                         x1=0
@@ -1074,7 +1034,7 @@ class compression:
                             x3 = x2-x
                             return print(x3)
 
-	def cryptograpy_compression2(self):
+    def cryptograpy_compression2(self):
                 
                 self.name = "Written: Jurijus pacalovas Date: 29/09/2021 18:06"
                 
