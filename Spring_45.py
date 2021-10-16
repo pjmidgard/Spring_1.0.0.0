@@ -243,6 +243,75 @@ class compression:
                                 e4=sda2[e2:e3]
                                 
                                 block=block+1
+
+                                if assxw>=e3%8:
+                                                
+                                            if e4=="0":
+                                                sda3=sda3+"1"
+                                                e4="0"
+                                                e4=""
+
+                                            if e4=="1":
+                                                sda3=sda3+"0"
+                                                e4="0"
+                                                e4=""
+
+                                
+
+                                if assxw<=e3%8:
+                                                
+                                            if e4=="0":
+                                                sda3=sda3+"0"
+                                                e4="0"
+                                                e4=""
+
+                                            if e4=="1":
+                                                sda3=sda3+"1"
+                                                e4="0"
+                                                e4=""
+                                                 
+                                  
+
+                                if assxw>=e3%4:
+                                                
+                                            if e4=="0":
+                                                sda3=sda3+"1"
+                                                e4="0"
+                                                e4=""
+
+                                            if e4=="1":
+                                                sda3=sda3+"0"
+                                                e4="0"
+                                                e4=""
+                                                 
+                                if e4=="1":
+                                	sda3=sda3+"1"
+                                	e4="1"
+                                	e4=""
+                                    
+                                if e4=="0":
+                                    sda3=sda3+"1"
+                                    e4="0"
+                                    e4=""    
+                                
+
+
+                                if assxw>=e3%4:
+                                                
+                                            if e4=="0":
+                                                sda3=sda3+"1"
+                                                e4="0"
+                                                e4=""
+                                                 
+                                if e4=="1":
+                                	sda3=sda3+"1"
+                                	e4="1"
+                                	e4=""
+                                    
+                                if e4=="0":
+                                    sda3=sda3+"1"
+                                    e4="0"
+                                    e4=""    
                                 
                                 if assxw>=e3%2:
                                                 
@@ -252,11 +321,11 @@ class compression:
                                                 e4=""
                                                  
                                 if e4=="1":
-                                	sda3=sda3+"0"
+                                	sda3=sda3+"1"
                                 	e4="1"
                                 	e4=""
                                     
-                                elif e4=="0":
+                                if e4=="0":
                                     sda3=sda3+"1"
                                     e4="0"
                                     e4=""     
@@ -568,8 +637,8 @@ class compression:
                                             ei=ei+1
 
                                             if sda8=="1":
-                                                sda5=sda3[ei:ei+2]
-                                                ei=ei+2
+                                                sda5=sda3[ei:ei+1]
+                                                ei=ei+1
 
                                                 
                                                 Bytes_row4=int(sda5, 2)
@@ -683,21 +752,21 @@ class compression:
 
                                        
 
-                                        if lenf<=2:
+                                        if lenf<=1:
                                                 sda7=""
                                                 szx=""
                                                 lenf=len(Colaider3)
-                                                xc=2-lenf
+                                                xc=1-lenf
                                                 z=0
                                                 if xc!=0:
-                                                    if xc!=2:
+                                                    if xc!=1:
                                                             while z<xc:
                                                                 szx="0"+szx
                                                                 z=z+1                                         	     														
 
                                              
                                              
-                                        if lenf<=2:   
+                                        if lenf<=1:   
                                         
                                             sda4=sda4+"1"+szx+Colaider3
                                                                         
