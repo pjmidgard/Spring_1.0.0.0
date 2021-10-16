@@ -863,12 +863,7 @@ class compression:
       
                         s=str(data)
 
-                        if name[nac-4:nac]==".mp4":
-                            if data[0:3]!=b'\x00\x00\x00' or data[0:4]==b'\x00\x00\x00\x00':
-                                raise SystemExit
-                        
-                        elif data[0:1]==b'\x00':
-                            raise SystemExit
+                   
                        
                         lenf1=len(data)
                         lenf5=len(data)
