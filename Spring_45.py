@@ -756,7 +756,7 @@ class compression:
 
                                        
 
-                                        if lenf<=8190 and Colaider3[0:1]=="1":
+                                        if lenf<=8190:
                                                 sda7=""
                                                 szx=""
                                                 lenf=len(Colaider3)
