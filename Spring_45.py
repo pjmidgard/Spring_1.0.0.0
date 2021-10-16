@@ -638,8 +638,8 @@ class compression:
                                             ei=ei+1
 
                                             if sda8=="1":
-                                                sda5=sda3[ei:ei+8191]
-                                                ei=ei+8191
+                                                sda5=sda3[ei:ei+8190]
+                                                ei=ei+8190
 
                                                 
                                                 Bytes_row4=int(sda5, 2)
@@ -756,7 +756,7 @@ class compression:
 
                                        
 
-                                        if lenf<=8191 and Colaider3[0:1]=="1":
+                                        if lenf<=8190 and Colaider3[0:1]=="1":
                                                 sda7=""
                                                 szx=""
                                                 lenf=len(Colaider3)
@@ -770,9 +770,9 @@ class compression:
 
                                              
                                              
-                                        if lenf<=8191:   
+                                        if lenf<=8190:   
                                         
-                                            sda4=sda4+szx+Colaider3
+                                            sda4=sda4+"1"+szx+Colaider3
                                                                         
                                         else:
 
