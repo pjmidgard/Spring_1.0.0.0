@@ -63,7 +63,7 @@ wer=""
 qtqweqw=""
 numberschangenotexist = []
 numbers = []
-namez = input("c2, ul2 or for compress cl for extract for e, cl2? ")
+namez = input("c,c2, ul2 or for compress cl for extract for u2,e, cl2? ")
 
 #@Author Jurijus pacalovas
 class compression:
@@ -541,7 +541,6 @@ class compression:
                                     lenf3=len(sda2)
                                 lenf2=len(sda2)
                                 #print(lenf2)
-                                
 
                                
 
@@ -551,10 +550,7 @@ class compression:
                                     
                                 #########################################################################################################################################################
                                 
-                                
                                 block2=0
-                                sda2=sda2[::-1]
-                               
                                 if i==2:
                                     
                                     lenf5=len(sda2)
@@ -630,10 +626,10 @@ class compression:
                                         if sda7=="0":
                                             ei=ei+1
 
-                                            sda9=sda3[ei:ei+8192]
+                                            sda9=sda3[ei:ei+4]
                                         
                                             sda4=sda4+sda9
-                                            ei=ei+8192
+                                            ei=ei+4
 
                                         if sda7=="1":
                                     
@@ -641,8 +637,8 @@ class compression:
                                             ei=ei+1
 
                                             if sda8=="1":
-                                                sda5=sda3[ei:ei+8190]
-                                                ei=ei+8190
+                                                sda5=sda3[ei:ei+2]
+                                                ei=ei+2
 
                                                 
                                                 Bytes_row4=int(sda5, 2)
@@ -663,10 +659,10 @@ class compression:
                                                 #print(lenf)
                                                 
                                                 #print(lenf)
-                                                xc=8192-lenf%8192
+                                                xc=4-lenf%4
                                                 z=0
                                                 if xc!=0:
-                                                     if xc!=8192:
+                                                     if xc!=4:
                                                            while z<xc:
                                                                 szx="0"+szx
                                                                 z=z+1
@@ -707,12 +703,9 @@ class compression:
                                 
   
                                 if i==1:
-                                    
                                     Spin=0
                                     sda3=sda2
                                     lenf6=len(sda3)
-                                    if lenf6<8192:
-                                    	raise SystemExit
                                     ei4=0
                                     ei5=20
                                     block3=0
@@ -736,9 +729,9 @@ class compression:
 
                                     while ei<lenf6:
 
-                                        sda9=sda2[ei:ei+8192]
+                                        sda9=sda2[ei:ei+4]
 
-                                        ei=ei+8192
+                                        ei=ei+4
 
                                         Bytes_row1=int(sda9, 2)
 
@@ -759,21 +752,21 @@ class compression:
 
                                        
 
-                                        if lenf<=8190:
+                                        if lenf<=2:
                                                 sda7=""
                                                 szx=""
                                                 lenf=len(Colaider3)
-                                                xc=8190-lenf
+                                                xc=2-lenf
                                                 z=0
                                                 if xc!=0:
-                                                    if xc!=8190:
+                                                    if xc!=2:
                                                             while z<xc:
                                                                 szx="0"+szx
                                                                 z=z+1                                         	     														
 
                                              
                                              
-                                        if lenf<=8190:   
+                                        if lenf<=2:   
                                         
                                             sda4=sda4+"1"+szx+Colaider3
                                                                         
@@ -853,7 +846,7 @@ class compression:
 
 d=compression()
 
-xw2=d.cryptograpy_compression2()
-print(xw2)
-xw=d.cryptograpy_compression()
+xw=d.cryptograpy_compression2()
 print(xw)
+
+xw=d.cryptograpy_compression()
