@@ -171,8 +171,10 @@ class compression:
       
                         s=str(data)
                         
-                        import brotlicffi:
-                        data=brotlicffi.compress(data)
+                        if i==2:
+                        
+                            import brotlicffi
+                            data=brotlicffi.decompress(data)
                        
                         lenf1=len(data)
                         lenf5=len(data)
@@ -384,9 +386,9 @@ class compression:
                                                     if Portal==9:
                                     	                jl=b'\xff\xd8\xff'+jl
                                     	                
-                                               
-                                                import brotlicffi:
-                                                jl=brotlicffi.compress(jl)
+                                                if i==1:
+                                                    import brotlicffi
+                                                    jl=brotlicffi.compress(jl)
                                                 f2.write(jl)
                                                 x2 = time()
                                                 x3=x2-x
@@ -481,9 +483,9 @@ class compression:
                         data = binary_file.read()
       
                         s=str(data)
-                        
-                        import brotlicffi:
-                        data=brotlicffi.compress(data)
+                        if i==2:
+                            import brotlicffi
+                            data=brotlicffi.decompress(data)
 
                    
                        
@@ -840,9 +842,10 @@ class compression:
                                         sda2=sda6
                                                         
                                         Circle_times2=Circle_times2+1
+                                        if i==1:
 
-                                        import brotlicffi:
-                                        jl=brotlicffi.compress(jl)
+                                            import brotlicffi
+                                            jl=brotlicffi.compress(jl)
 
 
 
