@@ -475,7 +475,7 @@ class compression:
                         data = binary_file.read()
       
                         s=str(data)
-
+                        
                         import brotlicffi:
                         data=brotlicffi.compress(data)
 
