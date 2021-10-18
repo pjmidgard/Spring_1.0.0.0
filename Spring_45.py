@@ -476,6 +476,9 @@ class compression:
       
                         s=str(data)
 
+                        import brotlicffi:
+                        data=brotlicffi.compress(data)
+
                    
                        
                         lenf1=len(data)
@@ -831,6 +834,11 @@ class compression:
                                         sda2=sda6
                                                         
                                         Circle_times2=Circle_times2+1
+
+                                        import brotlicffi:
+                                        jl=brotlicffi.compress(jl)
+
+
 
                                     
                                         if Circle_times2==1:                   
