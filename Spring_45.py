@@ -170,6 +170,9 @@ class compression:
                                     data=data[11:]
       
                         s=str(data)
+                        
+                        import brotlicffi:
+                        data=brotlicffi.compress(data)
                        
                         lenf1=len(data)
                         lenf5=len(data)
@@ -381,6 +384,9 @@ class compression:
                                                     if Portal==9:
                                     	                jl=b'\xff\xd8\xff'+jl
                                     	                
+                                               
+                                                import brotlicffi:
+                                                jl=brotlicffi.compress(jl)
                                                 f2.write(jl)
                                                 x2 = time()
                                                 x3=x2-x
