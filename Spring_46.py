@@ -1090,24 +1090,24 @@ class compression:
 
                                     if Circle_times2%7:
                                         c=3
-
-                                    if Circle_times2%8:
+                                    if Circle_times2%z:
                                         c=4
 
-                                    if Circle_times2%9:
+                                    if Circle_times2%z:
                                         c=6
                                         
                                     
-                                    if Circle_times2%10:
+                                    if Circle_times2%z:
                                         c=9
                                         
-                                    if Circle_times2%11:
+                                    if Circle_times2%z:
                                         c=2
-                                    if Circle_times2%12:
+                                    if Circle_times2%z:
                                         c=11
-                                    if Circle_times2%13:
+                                    if Circle_times2%z:
                                         c=10
                                     
+
                                     
 
                                     while ei<lenf8:
@@ -1147,7 +1147,12 @@ class compression:
                                     c=c+1
                                     if c==65536:
                                         c=0
+                                        
                                     
+                                    z=z+1
+                                    if c==65536:
+                                        z=0
+                                         
                                     if  Count1==0:
                                        
                                          n = int(wer, 2)
@@ -1212,21 +1217,21 @@ class compression:
                                     if Circle_times2%7:
                                         c=3
 
-                                    if Circle_times2%8:
+                                    if Circle_times2%z:
                                         c=4
 
-                                    if Circle_times2%9:
+                                    if Circle_times2%z:
                                         c=6
                                         
                                     
-                                    if Circle_times2%10:
+                                    if Circle_times2%z:
                                         c=9
                                         
-                                    if Circle_times2%11:
+                                    if Circle_times2%z:
                                         c=2
-                                    if Circle_times2%12:
+                                    if Circle_times2%z:
                                         c=11
-                                    if Circle_times2%13:
+                                    if Circle_times2%z:
                                         c=10
                                     
 
@@ -1299,6 +1304,9 @@ class compression:
                                         c=c+1
                                         if c==66536:
                                             c=0
+                                        z=z+1
+                                        if z==65536:
+                                            z=0
                                           
                                         
                                         if  count_times4==(lenf7*8):
