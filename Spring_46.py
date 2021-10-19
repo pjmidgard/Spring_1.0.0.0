@@ -1145,7 +1145,7 @@ class compression:
                                     Count1=Count1-1
                                     
                                     c=c+1
-                                    if c==lenf8:
+                                    if c==256:
                                         c=0
                                     
                                     if  Count1==0:
@@ -1297,7 +1297,7 @@ class compression:
                                             raise SystemExit
                                             
                                         c=c+1
-                                        if c==lenf7*8:
+                                        if c==256:
                                             c=0
                                           
                                         
