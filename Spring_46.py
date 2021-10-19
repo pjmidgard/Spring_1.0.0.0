@@ -948,6 +948,7 @@ class compression:
                         
                         END_working=0
                         Circle_times2=0
+                        z=1
                         ii=0
                         sda20=""
                         
@@ -1078,10 +1079,11 @@ class compression:
                                     
 
                                     count_times4=0
+                                    
 
-                                    if Circle_times2%c:
+                                    if Circle_times2%3:
                                         c=1
-                                    if Circle_times2%4:
+                                    if Circle_times2%c:
                                         c=5
                                     if Circle_times2%5:
                                         c=7
@@ -1147,12 +1149,12 @@ class compression:
                                     
                                     c=c+1
                                     if c==65536:
-                                        c=0
+                                        c=1
                                         
                                     
                                     z=z+1
-                                    if c==65536:
-                                        z=0
+                                    if c==256:
+                                        z=1
                                          
                                     if  Count1==0:
                                        
@@ -1206,9 +1208,9 @@ class compression:
 
                                     count_times4=0
                                     
-                                    if Circle_times2%c:
+                                    if Circle_times2%3:
                                         c=1
-                                    if Circle_times2%4:
+                                    if Circle_times2%c:
                                         c=5
                                     if Circle_times2%5:
                                         c=7
@@ -1304,10 +1306,10 @@ class compression:
                                             
                                         c=c+1
                                         if c==66536:
-                                            c=0
+                                            c=1
                                         z=z+1
-                                        if z==65536:
-                                            z=0
+                                        if z==256:
+                                            z=1
                                           
                                         
                                         if  count_times4==(lenf7*8):
