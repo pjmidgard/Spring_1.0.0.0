@@ -20,6 +20,6 @@ extract:
 d=r-0
 Bytes_row3=Bytes_row1-2 ** code
 
-Also, Init: Mix, 2 and reverso..
+Also, Init: Mix, 2 and reverso.
 
 Bye, bye.
