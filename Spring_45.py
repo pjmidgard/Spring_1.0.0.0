@@ -866,4 +866,5 @@ d=compression()
 xw=d.cryptograpy_compression2()
 print(xw)
 
-xw=d.cryptograpy_compression()
+xw2=d.cryptograpy_compression()
+print(xw2)
