@@ -600,7 +600,7 @@ class compression:
                                         
                                         ei=0
                                         while ei<lenf8:
-                                            sda5=sda5+"0"
+                                            sda5=sda5+"1"
 
                                             ei=ei+1
 
@@ -638,20 +638,22 @@ class compression:
 
                                         if sda10=="1" and ei!=Circle_times2%c:
                                             sda4=sda4+"1"
+                                            count_times4=count_times4+1
                                             
 
                                         elif sda10=="0" and ei!=Circle_times2%c: 
                                             sda4=sda4+"0"
-                                            count_times4=count_times4+1
+                                            
 
                                         elif sda10=="1" and ei==Circle_times2%c:
                                             sda4=sda4+"0"
-                                            count_times4=count_times4+1
+                                            
 
                                             
 
                                         elif sda10=="0" and ei==Circle_times2%c: 
                                             sda4=sda4+"1"
+                                            count_times4=count_times4+1
                                             
                                        
                                     #print(sda4)
@@ -741,20 +743,22 @@ class compression:
 
                                         if sda10=="1" and ei!=Circle_times2%c:
                                             sda4=sda4+"1"
+                                            count_times4=count_times4+1
                                             
 
                                         elif sda10=="0" and ei!=Circle_times2%c: 
                                             sda4=sda4+"0"
-                                            count_times4=count_times4+1
+                                            
 
                                         elif sda10=="1" and ei==Circle_times2%c:
                                             sda4=sda4+"0"
-                                            count_times4=count_times4+1
-
+                                            
                                             
 
                                         elif sda10=="0" and ei==Circle_times2%c: 
                                             sda4=sda4+"1"
+                                            count_times4=count_times4+1
+
                                             
                                             
                                         
