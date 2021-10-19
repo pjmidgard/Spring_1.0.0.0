@@ -645,10 +645,11 @@ class compression:
                                         
                                         if sda10=="1" and ei!=Circle_times2%c:
                                             sda4="1"+sda4
-                                            count_times4=count_times4+1
+                                            
 
                                         elif sda10=="0" and ei!=Circle_times2%c: 
                                             sda4="0"+sda4
+                                            count_times4=count_times4+1
 
                                         else:
                                             sda4=sda10+sda4
@@ -748,10 +749,11 @@ class compression:
                                         
                                         if sda10=="1" and ei!=Circle_times2%c:
                                             sda4="1"+sda4
-                                            count_times4=count_times4+1
+                                            
 
                                         elif sda10=="0" and ei!=Circle_times2%c: 
                                             sda4="0"+sda4
+                                            count_times4=count_times4+1
 
                                         else:
                                             sda4=sda10+sda4
