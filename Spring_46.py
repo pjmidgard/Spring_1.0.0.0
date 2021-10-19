@@ -1143,7 +1143,10 @@ class compression:
 
                                     Circle_times2=Circle_times2+1
                                     Count1=Count1-1
-                                                                                                                                                                                                              
+                                    
+                                    c=c+1
+                                    if c==65536:
+                                        c=0
                                     
                                     if  Count1==0:
                                        
@@ -1292,6 +1295,11 @@ class compression:
 
                                         if  Circle_times2==(2**48)-1:
                                             raise SystemExit
+                                            
+                                        c=c+1
+                                        if c==65536:
+                                            c=0
+                                          
                                         
                                         if  count_times4==(lenf7*8):
                                             
