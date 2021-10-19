@@ -1260,7 +1260,7 @@ class compression:
                                             
                                             
                                         
-                                    print(count_times4)
+                                    #print(count_times4)
                                     #print(sda4)
                                     #print(ei)
                                     sda6=sda4
