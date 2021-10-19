@@ -965,7 +965,7 @@ class compression:
                                     lenf1=len(data)
                                 
                                     xc=(lenf1*8)-lenf
-                                    z=0
+                                    z=1
                                     if xc!=0:
                                         while z<xc:
                                             sda="0"+sda
@@ -1268,7 +1268,7 @@ class compression:
                                             
                                             
                                         
-                                    print(count_times4)
+                                    #print(count_times4)
                                     #print(sda4)
                                     #print(ei)
                                     sda6=sda4
