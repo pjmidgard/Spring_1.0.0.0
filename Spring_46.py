@@ -631,28 +631,25 @@ class compression:
                                     
 
                                     while ei<lenf8:
-                                        if ei==Circle_times2%c:
-
-                                            sda10=sda3[ei:ei+1]
-                                            if sda10=="0":
-                                                sda10="1"
-                                            elif sda10=="1":
-                                                sda10="0"
-                                        else:
-
-                                            sda10=sda3[ei:ei+1] 
                                         
+                                        sda10=sda3[ei:ei+1] 
                                         
                                         if sda10=="1" and ei!=Circle_times2%c:
-                                            sda4="1"+sda4
+                                            sda4=sda4+"1"
                                             
 
                                         elif sda10=="0" and ei!=Circle_times2%c: 
-                                            sda4="0"+sda4
+                                            sda4=sda4+"0"
                                             count_times4=count_times4+1
 
-                                        else:
-                                            sda4=sda10+sda4
+                                        elif sda10=="1" and ei==Circle_times2%c:
+                                            sda4=sda4+"0"
+                                            count_times4=count_times4+1
+
+                                            
+
+                                        elif sda10=="0" and ei==Circle_times2%c: 
+                                            sda4=sda4+"1"
                                             
                                         ei=ei+1
                                     #print(sda4)
@@ -735,28 +732,31 @@ class compression:
                                     
 
                                     while ei<lenf6:
-                                        if ei==Circle_times2%c:
+                                        
 
-                                            sda10=sda3[ei:ei+1]
-                                            if sda10=="0":
-                                                sda10="1"
-                                            elif sda10=="1":
-                                                sda10="0"
-                                        else:
+                                        sda10=sda3[ei:ei+1]
+                                           
 
-                                            sda10=sda3[ei:ei+1] 
+                                            
                                         
                                         
                                         if sda10=="1" and ei!=Circle_times2%c:
-                                            sda4="1"+sda4
+                                            sda4=sda4+"1"
                                             
 
                                         elif sda10=="0" and ei!=Circle_times2%c: 
-                                            sda4="0"+sda4
+                                            sda4=sda4+"0"
                                             count_times4=count_times4+1
 
-                                        else:
-                                            sda4=sda10+sda4
+                                        elif sda10=="1" and ei==Circle_times2%c:
+                                            sda4=sda4+"0"
+                                            count_times4=count_times4+1
+
+                                            
+
+                                        elif sda10=="0" and ei==Circle_times2%c: 
+                                            sda4=sda4+"1"
+                                            
                                             
                                         
                                             
