@@ -632,8 +632,10 @@ class compression:
 
                                     while ei<lenf8:
                                         
-                                        sda10=sda3[ei:ei+1] 
-                                        
+                                        sda10=sda3[ei:ei+1]
+ 
+                                        ei=ei+1
+
                                         if sda10=="1" and ei!=Circle_times2%c:
                                             sda4=sda4+"1"
                                             
@@ -651,7 +653,7 @@ class compression:
                                         elif sda10=="0" and ei==Circle_times2%c: 
                                             sda4=sda4+"1"
                                             
-                                        ei=ei+1
+                                       
                                     #print(sda4)
                                     sda2=sda4
                                     wer=sda4
@@ -735,11 +737,8 @@ class compression:
                                         
 
                                         sda10=sda3[ei:ei+1]
-                                           
+                                        ei=ei+1
 
-                                            
-                                        
-                                        
                                         if sda10=="1" and ei!=Circle_times2%c:
                                             sda4=sda4+"1"
                                             
@@ -761,7 +760,7 @@ class compression:
                                         
                                             
                                             
-                                        ei=ei+1
+                                        
                                     #print(count_times4)
                                     #print(sda4)
                                     #print(ei)
