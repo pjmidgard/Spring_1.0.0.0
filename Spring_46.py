@@ -63,7 +63,7 @@ wer=""
 qtqweqw=""
 numberschangenotexist = []
 numbers = []
-namez = input("c,c2 ul2 or for compress cl for extract for e, e2 cl2?")
+namez = input("c,c2 ul2 or for compress cl for extract for e, e2 cl2? ")
 
 #@Author Jurijus pacalovas
 class compression:
