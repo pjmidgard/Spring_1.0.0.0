@@ -1079,7 +1079,7 @@ class compression:
 
                                     count_times4=0
 
-                                    if Circle_times2%3:
+                                    if Circle_times2%c:
                                         c=1
                                     if Circle_times2%4:
                                         c=5
@@ -1097,15 +1097,16 @@ class compression:
                                         c=6
                                         
                                     
-                                    if Circle_times2%z:
+                                    if Circle_times2%c%z:
                                         c=9
                                         
-                                    if Circle_times2%z:
+                                    if Circle_times2%z%c:
                                         c=2
-                                    if Circle_times2%z:
+                                    if Circle_times2%z%c:
                                         c=11
-                                    if Circle_times2%z:
+                                    if Circle_times2%c%z:
                                         c=10
+                                    
                                     
 
                                     
@@ -1205,7 +1206,7 @@ class compression:
 
                                     count_times4=0
                                     
-                                    if Circle_times2%3:
+                                    if Circle_times2%c:
                                         c=1
                                     if Circle_times2%4:
                                         c=5
@@ -1224,14 +1225,14 @@ class compression:
                                         c=6
                                         
                                     
-                                    if Circle_times2%z:
+                                    if Circle_times2%c%z:
                                         c=9
                                         
-                                    if Circle_times2%z:
+                                    if Circle_times2%z%c:
                                         c=2
-                                    if Circle_times2%z:
+                                    if Circle_times2%z%c:
                                         c=11
-                                    if Circle_times2%z:
+                                    if Circle_times2%c%z:
                                         c=10
                                     
 
@@ -1265,7 +1266,7 @@ class compression:
                                             
                                             
                                         
-                                    #print(count_times4)
+                                    print(count_times4)
                                     #print(sda4)
                                     #print(ei)
                                     sda6=sda4
