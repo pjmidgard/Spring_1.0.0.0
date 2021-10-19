@@ -1145,7 +1145,7 @@ class compression:
                                     Count1=Count1-1
                                     
                                     c=c+1
-                                    if c==65536:
+                                    if c==lenf8:
                                         c=0
                                     
                                     if  Count1==0:
@@ -1260,7 +1260,7 @@ class compression:
                                             
                                             
                                         
-                                    #print(count_times4)
+                                    print(count_times4)
                                     #print(sda4)
                                     #print(ei)
                                     sda6=sda4
@@ -1297,7 +1297,7 @@ class compression:
                                             raise SystemExit
                                             
                                         c=c+1
-                                        if c==65536:
+                                        if c==lenf7*8:
                                             c=0
                                           
                                         
