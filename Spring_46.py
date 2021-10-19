@@ -627,7 +627,19 @@ class compression:
                                         c=4
 
                                     if Circle_times2%9:
-                                        c=12
+                                        c=6
+                                        
+                                    
+                                    if Circle_times2%10:
+                                        c=9
+                                        
+                                    if Circle_times2%11:
+                                        c=2
+                                    if Circle_times2%12:
+                                        c=11
+                                    if Circle_times2%13:
+                                        c=10
+                                    
                                     
 
                                     while ei<lenf8:
@@ -732,7 +744,18 @@ class compression:
                                         c=4
 
                                     if Circle_times2%9:
-                                        c=12
+                                        c=6
+                                        
+                                    
+                                    if Circle_times2%10:
+                                        c=9
+                                        
+                                    if Circle_times2%11:
+                                        c=2
+                                    if Circle_times2%12:
+                                        c=11
+                                    if Circle_times2%13:
+                                        c=10
                                     
 
                                     while ei<lenf6:
