@@ -398,6 +398,7 @@ class compression:
                                                 el1=eo1
                                                 eo1=eo1-14
                                                 takebit=wers[eo1:el1]
+                                                C=el1
                                                     
                                                 wer=wer+takebit
                                                 sw=sw+1
