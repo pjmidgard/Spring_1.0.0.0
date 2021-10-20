@@ -308,14 +308,14 @@ class compression:
                                             
                                             
                                             el=eo
-                                            eo=eo+2523105
+                                            eo=eo+2523109
                                             takebitsize=sda[el:eo]
                                             xssd=len(takebitsize)
-                                            el=eo-2523105
-                                            eo=eo-2523105
+                                            el=eo-2523109
+                                            eo=eo-2523109
 
                                             
-                                            if xssd<=2523104:
+                                            if xssd<=2523108:
                                                 wer=wer+takebitsize
                                                 C=C+2523108
                                                    
@@ -403,10 +403,10 @@ class compression:
                                                 sw=sw+1
                                                    
                                             wers=""
-                                            wer=""
+                                        
 
 
-
+                                    wer=wer+sda[C:]
                                    
                                     lenf=len(wer)
                                     xc=8-lenf%8
