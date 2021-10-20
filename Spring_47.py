@@ -308,14 +308,14 @@ class compression:
                                             
                                             
                                             el=eo
-                                            eo=eo+2523108
+                                            eo=eo+2523105
                                             takebitsize=sda[el:eo]
                                             xssd=len(takebitsize)
-                                            el=eo-2523108
-                                            eo=eo-2523108
+                                            el=eo-2523105
+                                            eo=eo-2523105
 
                                             
-                                            if xssd<=2523107:
+                                            if xssd<=2523104:
                                                 wer=wer+takebitsize
                                                 C=C+2523108
                                                    
@@ -400,7 +400,6 @@ class compression:
                                                 takebit=wers[eo1:el1]
                                                     
                                                 wer=wer+takebit
-                                                C=C+2523108
                                                 sw=sw+1
                                                    
                                             wers=""
@@ -408,8 +407,7 @@ class compression:
 
 
 
-                                    wer=wer+sda[C:]
-                                           
+                                   
                                     lenf=len(wer)
                                     xc=8-lenf%8
                                     z=0
@@ -572,9 +570,9 @@ class compression:
                         with open(name, "rb") as binary_file:
                             data = binary_file.read()
                             lenf1=len(data)
-                            if lenf1<400000:
-                                print("This file is too small");
-                                raise SystemExit
+                            #if lenf1<400000:
+                                #print("This file is too small");
+                                #raise SystemExit
                             s=str(data)
                             lenf=len(data)
                         sda=bin(int(binascii.hexlify(data),16))[2:]
