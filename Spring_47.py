@@ -776,7 +776,12 @@ class compression:
                         szx=""        
                         wer="0b"+wer
                         n = int(wer, 2)
-                        jl=binascii.unhexlify('%x' % n)
+                        qqwslenf=len(wer)
+                        qqwslenf=(qqwslenf/8)*2
+                        qqwslenf=str(qqwslenf)
+                        qqwslenf="%0"+qqwslenf+"x"
+                        jl=binascii.unhexlify(qqwslenf % n)
+                        sssssw=len(jl)
                         with open(namea, "ab") as f2ww:             
                             f2ww.write(jl)
                             x2 = time()
@@ -1221,6 +1226,7 @@ class compression:
                                         qqwslenf="%0"+qqwslenf+"x"
                                         jl=binascii.unhexlify(qqwslenf % n)
                                         sssssw=len(jl)
+
 
                                                         
                                         Circle_times=Circle_times+1
