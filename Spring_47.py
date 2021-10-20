@@ -314,9 +314,10 @@ class compression:
                                             el=eo-2523108
                                             eo=eo-2523108
 
-                                            C=C+2523108
+                                            
                                             if xssd<=2523107:
                                                 wer=wer+takebitsize
+                                                C=C+2523108
                                                    
                                                 n = int(wer, 2)
                                         
@@ -399,6 +400,7 @@ class compression:
                                                 takebit=wers[eo1:el1]
                                                     
                                                 wer=wer+takebit
+                                                C=C+2523108
                                                 sw=sw+1
                                                    
                                             wers=""
