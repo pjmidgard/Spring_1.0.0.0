@@ -1576,6 +1576,7 @@ class compression:
 
 
 
+
     def cryptograpy_compression2(self):
                 
                 self.name = "Written: Jurijus pacalovas Date: 29/09/2021 18:06"
@@ -1669,7 +1670,6 @@ class compression:
                         
                         END_working=0
                         Circle_times2=0
-                        z=1
                         ii=0
                         sda20=""
                         
@@ -1686,7 +1686,7 @@ class compression:
                                     lenf1=len(data)
                                 
                                     xc=(lenf1*8)-lenf
-                                    z=1
+                                    z=0
                                     if xc!=0:
                                         while z<xc:
                                             sda="0"+sda
@@ -1800,11 +1800,10 @@ class compression:
                                     
 
                                     count_times4=0
-                                    
 
                                     if Circle_times2%3:
                                         c=1
-                                    if Circle_times2%c:
+                                    if Circle_times2%4:
                                         c=5
                                     if Circle_times2%5:
                                         c=7
@@ -1813,25 +1812,24 @@ class compression:
 
                                     if Circle_times2%7:
                                         c=3
-                                    if Circle_times2%z:
+
+                                    if Circle_times2%8:
                                         c=4
 
-                                    if Circle_times2%z:
+                                    if Circle_times2%9:
                                         c=6
                                         
                                     
-                                    if Circle_times2%c%z:
+                                    if Circle_times2%10:
                                         c=9
                                         
-                                    if Circle_times2%z%c:
+                                    if Circle_times2%11:
                                         c=2
-                                    if Circle_times2%z%c:
+                                    if Circle_times2%12:
                                         c=11
-                                    if Circle_times2%c%z:
+                                    if Circle_times2%13:
                                         c=10
                                     
-                                    
-
                                     
 
                                     while ei<lenf8:
@@ -1869,14 +1867,9 @@ class compression:
                                     Count1=Count1-1
                                     
                                     c=c+1
-                                    if c==65536:
-                                        c=1
-                                        
-                                    
-                                    z=z+1
                                     if c==256:
-                                        z=1
-                                         
+                                        c=0
+                                    
                                     if  Count1==0:
                                        
                                          n = int(wer, 2)
@@ -1931,7 +1924,7 @@ class compression:
                                     
                                     if Circle_times2%3:
                                         c=1
-                                    if Circle_times2%c:
+                                    if Circle_times2%4:
                                         c=5
                                     if Circle_times2%5:
                                         c=7
@@ -1941,21 +1934,21 @@ class compression:
                                     if Circle_times2%7:
                                         c=3
 
-                                    if Circle_times2%z:
+                                    if Circle_times2%8:
                                         c=4
 
-                                    if Circle_times2%z:
+                                    if Circle_times2%9:
                                         c=6
                                         
                                     
-                                    if Circle_times2%c%z:
+                                    if Circle_times2%10:
                                         c=9
                                         
-                                    if Circle_times2%z%c:
+                                    if Circle_times2%11:
                                         c=2
-                                    if Circle_times2%z%c:
+                                    if Circle_times2%12:
                                         c=11
-                                    if Circle_times2%c%z:
+                                    if Circle_times2%13:
                                         c=10
                                     
 
@@ -2026,11 +2019,8 @@ class compression:
                                             raise SystemExit
                                             
                                         c=c+1
-                                        if c==66536:
-                                            c=1
-                                        z=z+1
-                                        if z==256:
-                                            z=1
+                                        if c==256:
+                                            c=0
                                           
                                         
                                         if  count_times4==(lenf7*8):
