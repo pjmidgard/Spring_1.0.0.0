@@ -2217,7 +2217,7 @@ class compression:
                                         sda10=sda3[ei:ei+1]
  
                                         ei=ei+1
-                                        if Circle_times2==Circle_times2%1*(lenf7*8):
+                                        if Circle_times2==Circle_times2%1*(lenf8):
 
                                             if sda10=="1" and ei==Circle_times2%c:
                                                     sda4=sda4+"1"
@@ -2237,7 +2237,7 @@ class compression:
                                                     sda4=sda4+"1"
                                                     count_times4=count_times4+1
                                                 
-                                        elif Circle_times2==Circle_times2%2*(lenf7*8):
+                                        elif Circle_times2==Circle_times2%2*(lenf8):
                                             
                                             if sda10=="1" and ei==Circle_times2:
                                                     sda4=sda4+"1"
