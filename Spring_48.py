@@ -2217,8 +2217,7 @@ class compression:
                                         sda10=sda3[ei:ei+1]
  
                                         ei=ei+1
- 
-                                        if Spin%2==Spin%1:
+                                        if Circle_times2==Circle_times2%1*(lenf8):
 
                                             if sda10=="1" and ei==Circle_times2%c:
                                                     sda4=sda4+"1"
@@ -2238,7 +2237,7 @@ class compression:
                                                     sda4=sda4+"1"
                                                     count_times4=count_times4+1
                                                 
-                                        elif Spin==Spin%2:
+                                        elif Circle_times2==Circle_times2%2*(lenf8):
                                             
                                             if sda10=="1" and ei==Circle_times2:
                                                     sda4=sda4+"1"
@@ -2260,24 +2259,24 @@ class compression:
 
                                         else:
 
-                                            if sda10=="1" and ei!=Spin:
+                                            if sda10=="1" and ei==Circle_times2:
                                                     sda4=sda4+"1"
                                                     count_times4=count_times4+1
                                                     
 
-                                            elif sda10=="0" and ei!=Spin: 
+                                            elif sda10=="0" and ei==Circle_times2: 
                                                     sda4=sda4+"0"
                                                     
 
-                                            elif sda10=="1" and ei==Spin:
-                                                    sda4=sda4+"0"
+                                            elif sda10=="1" and ei!=Circle_times2:
+                                                sda4=sda4+"0"
                                                     
                                                     
 
-                                            elif sda10=="0" and ei==Spin: 
+                                            elif sda10=="0" and ei!=Circle_times2: 
                                                     sda4=sda4+"1"
                                                     count_times4=count_times4+1
-
+                                            
                                             
 
 
@@ -2298,9 +2297,8 @@ class compression:
                                     if c==256:
                                         c=0
 
-                                    if Circle_times2==Circle_times2%lenf8:
-                                           Spin=Spin+1
-
+                             
+                                        
                                     
                                     if  Count1==0:
                                        
@@ -2390,7 +2388,7 @@ class compression:
                                         sda10=sda3[ei:ei+1]
                                         ei=ei+1
 
-                                        if Spin==Spin%1:
+                                        if Circle_times2==Circle_times2%1*(lenf7*8):
 
                                             if sda10=="1" and ei==Circle_times2%c:
                                                     sda4=sda4+"1"
@@ -2410,7 +2408,7 @@ class compression:
                                                     sda4=sda4+"1"
                                                     count_times4=count_times4+1
                                                 
-                                        elif Spin==Spin%2:
+                                        elif Circle_times2==Circle_times2%2*(lenf7*8):
                                             
                                             if sda10=="1" and ei==Circle_times2:
                                                     sda4=sda4+"1"
@@ -2432,21 +2430,21 @@ class compression:
 
                                         else:
 
-                                            if sda10=="1" and ei!=Spin:
+                                            if sda10=="1" and ei==Circle_times2:
                                                     sda4=sda4+"1"
                                                     count_times4=count_times4+1
                                                     
 
-                                            elif sda10=="0" and ei!=Spin: 
+                                            elif sda10=="0" and ei==Circle_times2: 
                                                     sda4=sda4+"0"
                                                     
 
-                                            elif sda10=="1" and ei==Spin:
+                                            elif sda10=="1" and ei!=Circle_times2:
                                                     sda4=sda4+"0"
                                                     
                                                     
 
-                                            elif sda10=="0" and ei==Spin: 
+                                            elif sda10=="0" and ei!=Circle_times2: 
                                                     sda4=sda4+"1"
                                                     count_times4=count_times4+1
 
@@ -2495,9 +2493,6 @@ class compression:
                                         
                                         if c==256:
                                             c=0
-                                            
-                                        if Circle_times2==Circle_times2%lenf7*8:
-                                           Spin=Spin+1
 
 
                                        
