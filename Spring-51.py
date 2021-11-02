@@ -1631,11 +1631,11 @@ class compression:
                                            
                                            if lenf2!=14:
                                            	sda17=sda17+sda10
-                                           if block==8192 and lenf2==14:
+                                           if block==65536 and lenf2==14:
                                            	block=1
                                            	Spin=0
                                 
-                                           if block==8192 and lenf2==14 and Spin==0:
+                                           if block==65536 and lenf2==14 and Spin==0:
                                                   sda12=sda12+"0"
                                                            	                                        
                                             
@@ -1665,10 +1665,13 @@ class compression:
                                                          sda12=sda12+szx2+N4
                                                          
                                                          
-                                           if block>8191 and block<4096 and lenf2==14:
-                                           	sda17=sda17+sda10      
+                                           if block>8191 and lenf2==14 or block<4096 and lenf2==14:
+                                           	sda17=sda17+sda10 
+                                           	
+                                           
                                            if sda10!="00000000000000" and block>4095 and block<8192 and lenf2==14:
                                            	sda17=sda17+sda10
+                                           	
                                            	
                                   
                                                          
