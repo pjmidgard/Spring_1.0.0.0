@@ -1644,7 +1644,7 @@ class compression:
                                                   
                                        
 
-                                           if sda10=="00000000000000" and block>4096 and block<8192 and lenf2==14:
+                                           if sda10=="00000000000000" and block>4095 and block<8192 and lenf2==14:
                                                          
                                                         
                                                          
@@ -1665,7 +1665,7 @@ class compression:
                                                          sda12=sda12+szx2+N4
                                                          
                                                          
-                                           if block>8192 and block<4096 and lenf2==14:
+                                           if block>8191 and block<4096 and lenf2==14:
                                            	sda17=sda17+sda10      
                                            if sda10!="00000000000000" and block>4095 and block<8192 and lenf2==14:
                                            	sda17=sda17+sda10
