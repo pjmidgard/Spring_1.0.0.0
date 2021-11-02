@@ -1634,7 +1634,7 @@ class compression:
                                     
                                 
                                            if block==8192 and lenf2==14 and Spin==0:
-                                           	sda12=sda12+"0"
+                                           	sda12=sda12+"1"
                                                   
                                            if block==8192 and lenf2==14:
                                            	block=1
@@ -1646,7 +1646,7 @@ class compression:
                                                   
                                        
 
-                                           if sda10=="00000000000000" and block>4095 and block<8192 and lenf2==14:
+                                           if sda10=="00000000000000" and block<4096 and lenf2==14:
                                                          
                                                         
                                                          
@@ -1657,21 +1657,21 @@ class compression:
                                                          lenf=len(N4)
                                                                  
                                                          szx2=""
-                                                         xc=13-lenf
+                                                         xc=12-lenf
                                                          z=0
                                                          if xc!=0:
-                                                               if xc!=13:
+                                                               if xc!=12:
                                                                       while z<xc:
                                                                              szx2="0"+szx2
                                                                              z=z+1
                                                          sda12=sda12+szx2+N4
                                                          
                                                          
-                                           if block>8191 and lenf2==14 or block<4096 and lenf2==14:
+                                           if block<8191 and lenf2==14 or block>4095 and lenf2==14:
                                            	sda17=sda17+sda10 
                                            	
                                            
-                                           if sda10!="00000000000000" and block>4095 and block<8192 and lenf2==14:
+                                           if sda10!="00000000000000" and block<4096 and lenf2==14:
                                            	sda17=sda17+sda10
                                            	
                                            	
