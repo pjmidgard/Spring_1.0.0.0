@@ -1617,7 +1617,8 @@ class compression:
 
                                     while ei<lenf6F:
 
-                                           sda10=sda3[ei:ei+14]#32 bit 33 bit 31 bit
+                                           sda10=sda3[ei:ei+14]
+                                           #32 bit 33 bit 31 bit
 
                                          
                                            lenf1=len(sda10)
@@ -1630,16 +1631,22 @@ class compression:
                                            
                                            if lenf2!=14:
                                            	sda17=sda17+sda10
-                                           if block==65536 and lenf2==14:
-                                                  sda12=sda12+"0000000000000"
+                                           if block==8192 and lenf2==14:
+                                           	block=1
+                                           	Spin=0
+                                
+                                           if block==8192 and lenf2==14 and Spin==0:
+                                                  sda12=sda12+"0"
                                                            	                                        
                                             
-                                                  block=1
+                                                  
                                                   Spin=0
                                                   
                                        
 
-                                           if sda10=="00000000000000" and block<8192  and lenf2==14:
+                                           if sda10=="00000000000000" and block>4096 and block<8192 and lenf2==14:
+                                                         
+                                                        
                                                          
                                                          Spin=1
                                                          
@@ -1656,10 +1663,15 @@ class compression:
                                                                              szx2="0"+szx2
                                                                              z=z+1
                                                          sda12=sda12+szx2+N4
-                                                  
-                                           if sda10!="00000000000000" and lenf2==14:
+                                                         
+                                                         
+                                           if block>8192 and block<4096 and lenf2==14:
+                                           	sda17=sda17+sda10      
+                                           if sda10!="00000000000000" and block>4095 and block<8192 and lenf2==14:
+                                           	sda17=sda17+sda10
+                                           	
                                   
-                                                         sda17=sda17+sda10
+                                                         
             
                                            ei=ei+14
                                                   
@@ -1690,9 +1702,15 @@ class compression:
                                         sda4=""
                                         szx=""
                                         
+                                   
+                                        
                                         Circle_times2=Circle_times2+1
+                                        
+                                        
 
                                         lenf9=len(sda17)
+                                        #print(lenf9)
+                                       
                                         #print(Circle_times2)
                                         
                                         
