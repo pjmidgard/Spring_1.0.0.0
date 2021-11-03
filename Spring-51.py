@@ -1657,10 +1657,10 @@ class compression:
                                                          lenf=len(N4)
                                                                  
                                                          szx2=""
-                                                         xc=12-lenf
+                                                         xc=13-lenf
                                                          z=0
                                                          if xc!=0:
-                                                               if xc!=12:
+                                                               if xc!=13:
                                                                       while z<xc:
                                                                              szx2="0"+szx2
                                                                              z=z+1
